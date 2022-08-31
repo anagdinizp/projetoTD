@@ -1,4 +1,4 @@
-import { AnchorAvatar } from "./Style";
+import { AnchorAvatar } from "./style";
 
 interface avatarProps{
   width: string;
