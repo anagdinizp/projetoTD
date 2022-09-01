@@ -27,7 +27,7 @@ export const DogImageContainer = styled.div`
 
 export const InfoContainer = styled.div`
   display: block;
-  text-decoration-color: black;
+  color: black;
   margin-bottom: 1rem;
 `;
 
@@ -45,7 +45,7 @@ export const DogName = styled.strong`
 export const InfoTittle = styled.strong`
   display: block;
   padding-left: 0.75rem;
-  text-decoration-color: black;
+  color: black;
   margin-left: 0.75rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -54,7 +54,7 @@ export const InfoTittle = styled.strong`
 export const InfoSubtittle = styled.span`
   display: inline;
   font-weight: 200;
-  text-decoration-color: black;
+  color: black;
   font-size: 1.125rem;
   line-height: 1.75rem;
   text-align: start;

@@ -29,7 +29,8 @@ export function Suitors(){
       <strong>Localização: <span></span></strong>
     </div>
     <div>
-      <img src="" />
+      <img src="" 
+      />
     </div>
     <div>
       <div>

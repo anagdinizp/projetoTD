@@ -6,9 +6,14 @@ import { Input, InputPassword } from "../../components/Input";
 import { Logo } from "../../components/Logo/Logo";
 import { useToast } from "../../components/Toast";
 import {
+  ContainerLogin,
+  ContainerLoginForm,
   ContainerSlogan,
+  DogSide,
+  FormSide,
   InputTittle,
   LoginAnchor,
+  LoginForm,
   LoginSpan,
   LoginTittle,
   SloganSubtittle,
@@ -21,23 +26,23 @@ export function Login() {
   const navigate = useNavigate();
   const { showToast } = useToast();
 
-  const enterAccount = async (event: FormEvent) => {
-    event.preventDefault();
+  const enterAccount = async (event: FormEvent) => {}
+    //event.preventDefault();
     //if (!!email && !!password) {
       //UserApi.login({ email, password })
-      // .then((res: { data: { token: any } }) => {
-      // const { token } = res.data;
+      //.then((res: { data: { token: any } }) => {
+      //const { token } = res.data;
       //authenticate(token);
       //navigate("/inicio");
-      //})
+    //})
       //.catch((error) => {
-      //  showToast("Houve um problema ao entrar na sua conta!", "red");
+        //showToast("Houve um problema ao entrar na sua conta!", "red");
       //});
       //} else showToast("Houve um problema ao entrar na sua conta!", "red");
     //}
     return (
-      <div className="md:grid grid-cols-2">
-        <div className="hidden md:flex items-center justify-center visible bg-sorrisomdblend bg-cover bg-no-repeat flex-col">
+      <ContainerLogin>
+        <DogSide>
           <ContainerSlogan>
             <SloganTittle>Encontre o par perfeito para o seu pet</SloganTittle>
             <SloganSubtittle>
@@ -45,20 +50,12 @@ export function Login() {
               para o seu pet e os dois vão conseguir ter vários filhotes
             </SloganSubtittle>
           </ContainerSlogan>
-        </div>
-        <div className="bg-white bg-cover min-h-screen md:min-h-screen flex flex-col justify-center items-center justify-items-center">
-          <div>
-            <Logo
-              width={"180"}
-              height={"180"}
-              style={"flex items-center justify-center ml-6 -mt-6"}
-            />
-          </div>
-          <div className="bg-white-100 w-[22rem] h-fit rounded-lg flex flex-col justify-center items-center direct p-5">
+        </DogSide>
+        <FormSide>
+        <ContainerLoginForm>
             <LoginTittle>Entre na sua conta</LoginTittle>
-            <form
+            <LoginForm
               onSubmit={enterAccount}
-              className="flex flex-col gap-2 w-full"
             >
               <InputTittle>Email</InputTittle>
               <Input
@@ -77,12 +74,11 @@ export function Login() {
                 eyeInput={"light"}
               />
               <Button styleButton={{ color: "nude", size: "m" }}>Entrar</Button>
-            </form>
+            </LoginForm>
             <LoginSpan>Ainda não tem uma conta?</LoginSpan>
             <LoginAnchor href="/cadastro">Inscreva-se aqui</LoginAnchor>
-          </div>
-        </div>
-      </div>
+          </ContainerLoginForm>
+        </FormSide>
+      </ContainerLogin>
     );
   };
-}
