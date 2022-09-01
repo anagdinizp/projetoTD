@@ -1,4 +1,4 @@
-import { LogoFooter } from "../Logo";
+import { LogoFooter } from "../Logo/Logo";
 
 export function Footer() {
   return (
