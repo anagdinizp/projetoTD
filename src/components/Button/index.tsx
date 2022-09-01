@@ -1,3 +1,5 @@
+import { ButtonContainer } from "./style";
+
 type colorType = "purple" | "gray" | "nude";
 type sizeType = "s" | "m" | "l";
 
@@ -33,7 +35,7 @@ const getSize = (size: sizeType) => {
 
 export function Button({ styleButton, children }: buttonProps) {
   return (
-    <div className="flex justify-center text-center items-center">
+    <ButtonContainer>
       <button
         className={`${getColor(styleButton.color)}, ${getSize(
           styleButton.size
@@ -42,6 +44,6 @@ export function Button({ styleButton, children }: buttonProps) {
       >
         {children}
       </button>
-    </div>
+    </ButtonContainer>
   );
 }

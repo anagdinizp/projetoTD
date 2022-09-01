@@ -32,23 +32,23 @@ export function Card({ name, age, gender, breed, locale, dogImage }: dataCard) {
         <DogName>{name}</DogName>
         <InfoTittle>
           Idade:
-          <InfoSubtittle>{age}</InfoSubtittle>
+          <InfoSubtittle> {age}</InfoSubtittle>
         </InfoTittle>
         <InfoTittle>
           Raça:
-          <InfoSubtittle>{breed}</InfoSubtittle>
+          <InfoSubtittle> {breed}</InfoSubtittle>
         </InfoTittle>
         <InfoTittle>
           Sexo:
-          <InfoSubtittle>{gender}</InfoSubtittle>
+          <InfoSubtittle> {gender}</InfoSubtittle>
         </InfoTittle>
         <InfoTittle>
           Localização:
-          <InfoSubtittle>{locale}</InfoSubtittle>
+          <InfoSubtittle> {locale}</InfoSubtittle>
         </InfoTittle>
       </InfoContainer>
       <CardButton>
-        <ButtonIcon>{coração}</ButtonIcon>
+        <ButtonIcon> {coração}</ButtonIcon>
       </CardButton>
     </CardContainer>
   );

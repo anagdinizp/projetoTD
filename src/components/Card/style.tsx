@@ -28,6 +28,7 @@ export const DogImageContainer = styled.div`
 export const InfoContainer = styled.div`
   display: block;
   text-decoration-color: black;
+  margin-bottom: 1rem;
 `;
 
 export const DogName = styled.strong`
