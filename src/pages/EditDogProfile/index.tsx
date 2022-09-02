@@ -12,17 +12,17 @@ import {
   ButtonEditImageIcon,
   ButtonTrashIcon,
   ContainerButtonAddImage,
-  ContainerDogImage,
-  ContainerEditDog,
-  ContainerEditPetForm,
-  DeletePetContainer,
-  DeletePetIcon,
-  DeletePetText,
-  DogImage,
-  EditDogTittle,
+  ContainerImage,
+  ContainerEditProfile,
+  ContainerEditProfileForm,
+  DeleteContainer,
+  DeleteIcon,
+  DeleteText,
+  ProfileImage,
+  EditProfileTittle,
   EditGalleryTittle,
-  EditPetForm,
-  EditPetFormTittle,
+  EditProfileForm,
+  EditFormTittle,
   Gallery,
   GalleryContainer,
 } from "./style";
@@ -61,17 +61,17 @@ export function DogProfile() {
 
   return (
     <>
-      <EditDogTittle>Editar informações do pet</EditDogTittle>
-      <ContainerEditDog>
-        <ContainerDogImage>
-          <DogImage src="https://images.pexels.com/photos/1139794/pexels-photo-1139794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+      <EditProfileTittle>Editar informações do pet</EditProfileTittle>
+      <ContainerEditProfile>
+        <ContainerImage>
+          <ProfileImage src="https://images.pexels.com/photos/1139794/pexels-photo-1139794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
           <ButtonEditImage>
             <ButtonEditImageIcon>{imagem}</ButtonEditImageIcon>
           </ButtonEditImage>
-        </ContainerDogImage>
-        <ContainerEditPetForm>
-          <EditPetForm onSubmit={saveChanges}>
-            <EditPetFormTittle>Nome</EditPetFormTittle>
+        </ContainerImage>
+        <ContainerEditProfileForm>
+          <EditProfileForm onSubmit={saveChanges}>
+            <EditFormTittle>Nome</EditFormTittle>
             <Input
               styleType={{
                 theme: "light",
@@ -82,7 +82,7 @@ export function DogProfile() {
               value={name}
               setState={setName}
             />
-            <EditPetFormTittle>Idade</EditPetFormTittle>
+            <EditFormTittle>Idade</EditFormTittle>
             <Input
               styleType={{
                 theme: "light",
@@ -93,7 +93,7 @@ export function DogProfile() {
               value={age}
               setState={setAge}
             />
-            <EditPetFormTittle>Raça</EditPetFormTittle>
+            <EditFormTittle>Raça</EditFormTittle>
             <Input
               styleType={{
                 theme: "light",
@@ -104,7 +104,7 @@ export function DogProfile() {
               value={breed}
               setState={setBreed}
             />
-            <EditPetFormTittle>Sexo</EditPetFormTittle>
+            <EditFormTittle>Sexo</EditFormTittle>
             <Input
               styleType={{
                 theme: "light",
@@ -115,7 +115,7 @@ export function DogProfile() {
               value={gender}
               setState={setGender}
             />
-            <EditPetFormTittle>Localização</EditPetFormTittle>
+            <EditFormTittle>Localização</EditFormTittle>
             <Input
               styleType={{
                 theme: "light",
@@ -127,13 +127,13 @@ export function DogProfile() {
               setState={setLocale}
             />
             <Button styleButton={{ color: "nude", size: "s" }}>Salvar</Button>
-          </EditPetForm>
-        </ContainerEditPetForm>
-        <DeletePetContainer>
-          <DeletePetText>Excluir pet</DeletePetText>
-          <DeletePetIcon>{lixeira}</DeletePetIcon>
-        </DeletePetContainer>
-      </ContainerEditDog>
+          </EditProfileForm>
+        </ContainerEditProfileForm>
+        <DeleteContainer>
+          <DeleteText>Excluir pet</DeleteText>
+          <DeleteIcon>{lixeira}</DeleteIcon>
+        </DeleteContainer>
+      </ContainerEditProfile>
       <>
         <EditGalleryTittle>Editar galeria</EditGalleryTittle>
         <GalleryContainer>

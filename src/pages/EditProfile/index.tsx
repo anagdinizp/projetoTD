@@ -1,10 +1,24 @@
 import { useState } from "react";
-import { Button } from "../components/Button";
-import { Input, InputPassword } from "../components/Input";
-import { useToast } from "../components/Toast";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useToast } from "../../components/Toast";
+import { Input, InputPassword } from "../../components/Input";
+import { Button } from "../../components/Button";
+import {
+  ButtonEditImage,
+  ButtonEditImageIcon,
+  ContainerEditProfile,
+  ContainerEditProfileForm,
+  ContainerImage,
+  DeleteContainer,
+  DeleteIcon,
+  DeleteText,
+  EditFormTittle,
+  EditProfileForm,
+  EditProfileTittle,
+  ProfileImage,
+} from "../EditDogProfile/style";
 
 interface profileData {
   name: String;
@@ -30,31 +44,25 @@ export function EditProfile() {
   const imagem = <FontAwesomeIcon icon={faImage} />;
 
   function saveChanges(event: any) {
-    event?.preventDefault()
-    showToast("Alterações salvas", "green")
+    event?.preventDefault();
+    showToast("Alterações salvas", "green");
   }
 
   return (
     <>
-      <strong className="flex justify-center font-bold text-xl mt-5 p-2 md:text-2xl">Editar informações do perfil</strong>
-      <div className="grid gap-2 ml-5 mr-5">
-        <div className="flex flex-col items-center">
-          <img
-            className="w-[164px] h-[162px] rounded-full m-auto mt-4 overflow-hidden"
+      <EditProfileTittle>Editar informações do perfil</EditProfileTittle>
+      <ContainerEditProfile>
+        <ContainerImage>
+          <ProfileImage
             src="https://pbs.twimg.com/profile_images/1562216319918931968/Unr7rsbO_400x400.jpg"
           />
-          <button className="mt-2">
-            <span className="inline-block align-middle text-2xl">{imagem}</span>
-          </button>
-        </div>
-        <div className="flex md:w-[600px] justify-self-center">
-          <form
-            onSubmit={saveChanges}
-            className="flex flex-col gap-2 w-full h-full"
-          >
-            <strong className="text-black text-base mb-1 md:text-2xl">
-              Nome
-            </strong>
+          <ButtonEditImage>
+            <ButtonEditImageIcon>{imagem}</ButtonEditImageIcon>
+          </ButtonEditImage>
+        </ContainerImage>
+        <ContainerEditProfileForm>
+          <EditProfileForm onSubmit={saveChanges}>
+            <EditFormTittle>Nome</EditFormTittle>
             <Input
               styleType={{
                 theme: "light",
@@ -65,9 +73,7 @@ export function EditProfile() {
               value={name}
               setState={setName}
             />
-            <strong className="text-black text-base mb-1 md:text-2xl">
-              Idade
-            </strong>
+            <EditFormTittle>Idade</EditFormTittle>
             <Input
               styleType={{
                 theme: "light",
@@ -78,9 +84,7 @@ export function EditProfile() {
               value={age}
               setState={setAge}
             />
-            <strong className="text-black text-base mb-1 md:text-2xl">
-              Profissão
-            </strong>
+            <EditFormTittle>Profissão</EditFormTittle>
             <Input
               styleType={{
                 theme: "light",
@@ -91,9 +95,7 @@ export function EditProfile() {
               value={career}
               setState={setCareer}
             />
-            <strong className="text-black text-base mb-1 md:text-2xl">
-              Contato
-            </strong>
+            <EditFormTittle>Contato</EditFormTittle>
             <Input
               styleType={{
                 theme: "light",
@@ -104,9 +106,7 @@ export function EditProfile() {
               value={telephone}
               setState={setTelephone}
             />
-            <strong className="text-black text-base mb-1 md:text-2xl">
-              Localização
-            </strong>
+            <EditFormTittle>Localização</EditFormTittle>
             <Input
               styleType={{
                 theme: "light",
@@ -117,9 +117,7 @@ export function EditProfile() {
               value={locale}
               setState={setLocale}
             />
-            <strong className="text-black text-base mb-1 md:text-2xl">
-              Email
-            </strong>
+            <EditFormTittle>Email</EditFormTittle>
             <Input
               styleType={{
                 theme: "light",
@@ -130,9 +128,7 @@ export function EditProfile() {
               value={email}
               setState={setEmail}
             />
-            <strong className="text-black text-base mb-1 md:text-2xl">
-              Senha
-            </strong>
+            <EditFormTittle>Senha</EditFormTittle>
             <InputPassword
               setState={setPassword}
               type={"password"}
@@ -140,20 +136,14 @@ export function EditProfile() {
               style={"light"}
               eyeInput={"light"}
             />
-            <div className="">
-              <Button styleButton={{ color: "nude", size: "s" }}>
-                Salvar
-              </Button>
-            </div>
-          </form>
-        </div>
-        <div className="flex justify-end items-center cursor-pointer">
-          <span className="text-base md:text-xl">Excluir conta</span>
-          <button>
-            <span className="inline-block align-middle ml-3 text-2xl">{lixeira}</span>
-          </button>
-        </div>
-      </div>
+            <Button styleButton={{ color: "nude", size: "s" }}>Salvar</Button>
+          </EditProfileForm>
+        </ContainerEditProfileForm>
+        <DeleteContainer>
+          <DeleteText>Excluir conta</DeleteText>
+          <DeleteIcon>{lixeira}</DeleteIcon>
+        </DeleteContainer>
+      </ContainerEditProfile>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { point } from "../../components/Breakpoints";
 
-export const EditDogTittle = styled.strong`
+export const EditProfileTittle = styled.strong`
   display: flex;
   justify-content: center;
   font-weight: 700;
@@ -15,7 +15,7 @@ export const EditDogTittle = styled.strong`
   }
 `;
 
-export const ContainerEditDog = styled.div`
+export const ContainerEditProfile = styled.div`
   display: grid;
   gap: 0.5rem;
   margin-left: 1.25rem;
@@ -23,13 +23,13 @@ export const ContainerEditDog = styled.div`
   border-bottom-width: 1px;
 `;
 
-export const ContainerDogImage = styled.div`
+export const ContainerImage = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const DogImage = styled.img`
+export const ProfileImage = styled.img`
   width: 164px;
   height: 162px;
   border-radius: 100%;
@@ -49,7 +49,7 @@ export const ButtonEditImageIcon = styled.span`
   line-height: 2rem;
 `;
 
-export const ContainerEditPetForm = styled.div`
+export const ContainerEditProfileForm = styled.div`
   display: flex;
   @media ${point.tablet} {
     width: 600px;
@@ -57,7 +57,7 @@ export const ContainerEditPetForm = styled.div`
   }
 `;
 
-export const EditPetForm = styled.form`
+export const EditProfileForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -65,7 +65,7 @@ export const EditPetForm = styled.form`
   height: 100%;
 `;
 
-export const EditPetFormTittle = styled.strong`
+export const EditFormTittle = styled.strong`
   color: black;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -76,14 +76,14 @@ export const EditPetFormTittle = styled.strong`
   }
 `;
 
-export const DeletePetContainer = styled.div`
+export const DeleteContainer = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
   cursor: pointer;
 `;
 
-export const DeletePetText = styled.span`
+export const DeleteText = styled.span`
   font-size: 1rem;
   line-height: 1.5rem;
   @media ${point.tablet} {
@@ -92,7 +92,7 @@ export const DeletePetText = styled.span`
   }
 `;
 
-export const DeletePetIcon = styled.button`
+export const DeleteIcon = styled.button`
   display: inline-block;
   vertical-align: middle;
   margin-left: 0.75rem;
