@@ -1,0 +1,155 @@
+import styled from "styled-components";
+import { point } from "../../components/Breakpoints";
+
+export const EditDogTittle = styled.strong`
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding: 0.5rem;
+  margin-top: 1.25rem;
+  @media ${point.tablet} {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+`;
+
+export const ContainerEditDog = styled.div`
+  display: grid;
+  gap: 0.5rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  border-bottom-width: 1px;
+`;
+
+export const ContainerDogImage = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const DogImage = styled.img`
+  width: 164px;
+  height: 162px;
+  border-radius: 100%;
+  margin: auto;
+  margin-top: 1rem;
+  overflow: hidden;
+`;
+
+export const ButtonEditImage = styled.button`
+  margin-top: 0.5rem;
+`;
+
+export const ButtonEditImageIcon = styled.span`
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  line-height: 2rem;
+`;
+
+export const ContainerEditPetForm = styled.div`
+  display: flex;
+  @media ${point.tablet} {
+    width: 600px;
+    justify-self: center;
+  }
+`;
+
+export const EditPetForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+`;
+
+export const EditPetFormTittle = styled.strong`
+  color: black;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.25rem;
+  @media ${point.tablet} {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+`;
+
+export const DeletePetContainer = styled.div`
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+`;
+
+export const DeletePetText = styled.span`
+  font-size: 1rem;
+  line-height: 1.5rem;
+  @media ${point.tablet} {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+`;
+
+export const DeletePetIcon = styled.button`
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+`;
+
+export const EditGalleryTittle = styled.strong`
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding: 0.5rem;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+  @media ${point.tablet} {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+`; 
+
+export const GalleryContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const Gallery = styled.div`
+  width: 326px;
+  height: 340px;
+  border-radius: 1.5rem;
+  margin-right: 0.25rem;
+  margin-top: 0.75rem;
+  padding: 1rem;
+`;
+
+export const ButtonTrashIcon = styled.button`
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.75rem;
+  font-size: 1.rem;
+  line-height: 2rem;
+`;
+
+export const ContainerButtonAddImage = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  cursor: pointer;
+`;
+
+export const ButtonAddImage = styled.button`
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.75rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+`;
