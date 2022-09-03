@@ -4,17 +4,21 @@ import { useState } from "react";
 import {
   DogImage,
   DogImageContainer,
+  DogInfoContainer,
   DogProfileContainer,
   EditIcon,
   EditIconAnchor,
   InfoContainer,
   InfoSubtittle,
   InfoTittle,
-  Name,
+  OwnerName,
   NameIconContainer,
   OwnerAvatar,
   OwnerAvatarContainer,
   OwnerContainer,
+  DogName,
+  GalleryContainer,
+  DogGallerySlider,
 } from "./style";
 type genderType = "Macho" | "Fêmea";
 
@@ -86,7 +90,7 @@ export function Profile() {
         </OwnerAvatarContainer>
         <InfoContainer>
           <NameIconContainer>
-            <Name>{owner.name}</Name>
+            <OwnerName>{owner.name}</OwnerName>
             <EditIconAnchor href="/editar">
               <EditIcon>{editar}</EditIcon>
             </EditIconAnchor>
@@ -114,48 +118,33 @@ export function Profile() {
           <DogImageContainer>
             <DogImage src={dog.dogAvatar} />
           </DogImageContainer>
-          <div className="block text-black font-extralight p-10 md:p-20 md:-ml-16">
-            <div className="flex justify-between">
-              <strong className="block font-bold text-2xl text-start mr-1 md:text-4xl md:mr-8">
-                {dog.name}
-              </strong>
-              <a href="/pet" className="justify-items-center">
-                <span className="inline-block align-middle text-2xl">
-                  {editar}
-                </span>
-              </a>
-            </div>
-            <strong className="block font-bold text-lg mt-4 text-start md:mt-10">
+          <DogInfoContainer>
+            <NameIconContainer>
+              <DogName>{dog.name}</DogName>
+              <EditIconAnchor href="/pet">
+                <EditIcon>{editar}</EditIcon>
+              </EditIconAnchor>
+            </NameIconContainer>
+            <InfoTittle>
               Idade:
-              <span className="inline text-start font-extralight text-black text-lg md:font-extralight">
-                {dog.age} anos
-              </span>
-            </strong>
-            <strong className="block font-bold text-lg mt-1 text-start">
+              <InfoSubtittle>{dog.age} anos</InfoSubtittle>
+            </InfoTittle>
+            <InfoTittle>
               Raça:
-              <span className="inline text-start font-extralight text-black text-lg md:font-extralight">
-                {dog.breed}
-              </span>
-            </strong>
-            <strong className="block font-bold text-lg mt-1 text-start">
+              <InfoSubtittle>{dog.breed}</InfoSubtittle>
+            </InfoTittle>
+            <InfoTittle>
               Sexo:
-              <span className="inline text-start font-extralight text-black text-lg md:font-extralight">
-                {dog.gender}
-              </span>
-            </strong>
-            <strong className="block font-bold text-lg mt-1 text-start">
+              <InfoSubtittle>{dog.gender}</InfoSubtittle>
+            </InfoTittle>
+            <InfoTittle>
               Localização:
-              <span className="inline text-start font-extralight text-black text-lg md:font-extralight">
-                {dog.locale}
-              </span>
-            </strong>
-          </div>
-          <div className="flex justify-between mb-3 mt-3">
-            <img
-              className="w-[400px] h-[400px] mx-2"
-              src={dog.gallery.image01}
-            />
-          </div>
+              <InfoSubtittle>{dog.locale}</InfoSubtittle>
+            </InfoTittle>
+          </DogInfoContainer>
+          <GalleryContainer>
+            <DogGallerySlider src={dog.gallery.image01} />
+          </GalleryContainer>
         </DogProfileContainer>
       ))}
     </>

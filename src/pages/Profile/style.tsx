@@ -48,7 +48,7 @@ export const NameIconContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const Name = styled.strong`
+export const OwnerName = styled.strong`
   display: block;
   color: black;
   font-weight: 700;
@@ -124,4 +124,43 @@ export const DogImage = styled.img`
     width: 274px;
     height: 274px;
   }
+`;
+
+export const DogInfoContainer = styled.div`
+  display: block;
+  color: black;
+  font-weight: 200;
+  padding: 2.5rem;
+  @media ${point.tablet} {
+    padding: 5rem;
+    margin-left: -4rem;
+  }
+`;
+
+export const DogName = styled.strong`
+  display: block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: start;
+  margin-right: 0.25rem;
+  @media ${point.tablet} {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    margin-right: 2rem;
+  }
+`;
+
+export const GalleryContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+`;
+
+export const DogGallerySlider = styled.img`
+  width: 400px;
+  height: 400px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 `;
