@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { UserAvatarAnchor } from "./Avatar";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { faBone } from "@fortawesome/free-solid-svg-icons";
 import { faDog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { UserAvatarAnchor } from "../Avatar";
+import { AnchorNav, IconNav, NavContainer, PagesNav, UlNav } from "./style";
 
 export function Navbar({ children }: any) {
   const [open, setOpen] = useState(false);
@@ -28,31 +29,25 @@ export function Navbar({ children }: any) {
   });
 
   return (
-    <div className="flex items-center h-16 justify-around bg-white border-b border-b-gray-200">
-      <ul className="gap-14 md:gap-20 flex justify-center items-center text-black">
+    <NavContainer>
+      <UlNav>
         <li>
-          <div>
-            <a className="m-auto align-middle justify-center" href={"/inicio"}>
-              <span className="inline-block align-middle text-2xl">{cachorro}</span>
-              <span className="hidden md:inline-block text-center p-2 text-lg font-extralight">Início</span>
-            </a>
-          </div>
+            <AnchorNav href={"/inicio"}>
+              <IconNav>{cachorro}</IconNav>
+              <PagesNav>Início</PagesNav>
+            </AnchorNav>
         </li>
         <li>
-          <div>
-            <a className="m-auto align-middle justify-center" href={"#"}>
-              <span className="inline-block align-middle text-2xl">{pata}</span>
-              <span className="hidden md:inline-block text-center p-2 text-lg font-extralight">Meus crushs</span>
-            </a>
-          </div>
+            <AnchorNav href={"#"}>
+              <IconNav>{pata}</IconNav>
+              <PagesNav>Meus crushs</PagesNav>
+            </AnchorNav>
         </li>
         <li>
-          <div>
-            <a className="m-auto align-middle justify-center" href={"#"}>
-              <span className="inline-block align-middl text-2xl">{osso}</span>
-              <span className="hidden md:inline-block text-center p-2 text-lg font-extralight">Pretendentes</span>
-            </a>
-          </div>
+            <AnchorNav href={"#"}>
+              <IconNav>{osso}</IconNav>
+              <PagesNav>Pretendentes</PagesNav>
+            </AnchorNav>
         </li>
         <li>
           <UserAvatarAnchor
@@ -61,7 +56,7 @@ export function Navbar({ children }: any) {
             height={"14rem"}
           />
         </li>
-      </ul>
-    </div>
+      </UlNav>
+    </NavContainer>
   );
 }
