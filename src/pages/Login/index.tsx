@@ -6,10 +6,10 @@ import { Input, InputPassword } from "../../components/Input";
 import { Logo } from "../../components/Logo/Logo";
 import { useToast } from "../../components/Toast";
 import {
-  ContainerLogin,
+  ContainerTwoSides,
   ContainerLoginForm,
   ContainerSlogan,
-  DogSide,
+  DogSideLogin,
   FormSide,
   InputTittle,
   LoginAnchor,
@@ -41,8 +41,8 @@ export function Login() {
       //} else showToast("Houve um problema ao entrar na sua conta!", "red");
     //}
     return (
-      <ContainerLogin>
-        <DogSide>
+      <ContainerTwoSides>
+        <DogSideLogin>
           <ContainerSlogan>
             <SloganTittle>Encontre o par perfeito para o seu pet</SloganTittle>
             <SloganSubtittle>
@@ -50,7 +50,7 @@ export function Login() {
               para o seu pet e os dois vão conseguir ter vários filhotes
             </SloganSubtittle>
           </ContainerSlogan>
-        </DogSide>
+        </DogSideLogin>
         <FormSide>
         <ContainerLoginForm>
             <LoginTittle>Entre na sua conta</LoginTittle>
@@ -79,6 +79,6 @@ export function Login() {
             <LoginAnchor href="/cadastro">Inscreva-se aqui</LoginAnchor>
           </ContainerLoginForm>
         </FormSide>
-      </ContainerLogin>
+      </ContainerTwoSides>
     );
   };

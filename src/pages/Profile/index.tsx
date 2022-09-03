@@ -1,6 +1,21 @@
 import { faUserEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import {
+  DogImage,
+  DogImageContainer,
+  DogProfileContainer,
+  EditIcon,
+  EditIconAnchor,
+  InfoContainer,
+  InfoSubtittle,
+  InfoTittle,
+  Name,
+  NameIconContainer,
+  OwnerAvatar,
+  OwnerAvatarContainer,
+  OwnerContainer,
+} from "./style";
 type genderType = "Macho" | "Fêmea";
 
 interface profileData {
@@ -62,62 +77,43 @@ const owner = {
 };
 
 export function Profile() {
-
   const editar = <FontAwesomeIcon icon={faUserEdit} />;
   return (
-    <div>
-      <div className="bg-white border-b border-b-gray-400 block md:flex">
-        <div className="md:ml-10 md:p-10">
-          <img
-            className="w-[164px] h-[162px] rounded-full m-auto mt-4 overflow-hidden md:w-[274px] md:h-[274px]"
-            src={owner.avatar}
-          />
-        </div>
-        <div className="block text-black font-extralight p-10 ml-1 md:p-20 md:-ml-16">
-          <div className="flex justify-between">
-            <strong className="block text-black font-bold text-2xl mr-1 md:text-4xl md:mr-8">
-              {owner.name}
-            </strong>
-            <a href="/editar" className="justify-items-center">
-              <span className="inline-block align-middle text-2xl">
-                {editar}
-              </span>
-            </a>
-          </div>
-          <strong className="block font-bold text-lg mt-4 md:mt-10 text-start">
+    <>
+      <OwnerContainer>
+        <OwnerAvatarContainer>
+          <OwnerAvatar src={owner.avatar} />
+        </OwnerAvatarContainer>
+        <InfoContainer>
+          <NameIconContainer>
+            <Name>{owner.name}</Name>
+            <EditIconAnchor href="/editar">
+              <EditIcon>{editar}</EditIcon>
+            </EditIconAnchor>
+          </NameIconContainer>
+          <InfoTittle>
             Idade:
-            <span className="inline text-start font-extralight text-black text-lg md:font-extralight">
-              {owner.age} anos
-            </span>
-          </strong>
-          <strong className="block font-bold text-lg mt-1 md:text-start">
+            <InfoSubtittle>{owner.age} anos</InfoSubtittle>
+          </InfoTittle>
+          <InfoTittle>
             Profissão:
-            <span className="inline text-start font-extralight text-black text-lg md:font-extralight">
-              {owner.career}
-            </span>
-          </strong>
-          <strong className="block font-bold text-lg mt-1 md:text-start">
+            <InfoSubtittle>{owner.career}</InfoSubtittle>
+          </InfoTittle>
+          <InfoTittle>
             Localização:
-            <span className="inline text-start font-extralight text-black text-lg md:font-extralight">
-              {owner.locale}
-            </span>
-          </strong>
-          <strong className="block font-bold text-lg mt-1 md:text-start">
+            <InfoSubtittle>{owner.locale}</InfoSubtittle>
+          </InfoTittle>
+          <InfoTittle>
             Contato:
-            <span className="inline text-start font-extralight text-black text-lg md:font-extralight">
-              {owner.telefone}
-            </span>
-          </strong>
-        </div>
-      </div>
+            <InfoSubtittle>{owner.telefone}</InfoSubtittle>
+          </InfoTittle>
+        </InfoContainer>
+      </OwnerContainer>
       {dogs.map((dog) => (
-        <div className="bg-white rounded-lg border-b border-b-gray-400 md:flex md:justify-between">
-          <div className="md:ml-10 md:p-10">
-            <img
-              className="w-[164px] h-[162px] rounded-full m-auto mt-4 overflow-hidden md:w-[274px] md:h-[274px]"
-              src={dog.dogAvatar}
-            />
-          </div>
+        <DogProfileContainer>
+          <DogImageContainer>
+            <DogImage src={dog.dogAvatar} />
+          </DogImageContainer>
           <div className="block text-black font-extralight p-10 md:p-20 md:-ml-16">
             <div className="flex justify-between">
               <strong className="block font-bold text-2xl text-start mr-1 md:text-4xl md:mr-8">
@@ -160,8 +156,8 @@ export function Profile() {
               src={dog.gallery.image01}
             />
           </div>
-        </div>
+        </DogProfileContainer>
       ))}
-    </div>
+    </>
   );
 }

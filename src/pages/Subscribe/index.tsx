@@ -1,8 +1,18 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../components/Button";
-import { Input, InputPassword } from "../components/Input";
-import { useToast } from "../components/Toast";
+import { Button } from "../../components/Button";
+import { Input, InputPassword } from "../../components/Input";
+import { useToast } from "../../components/Toast";
+import { EditFormTittle } from "../EditDogProfile/style";
+import { ContainerTwoSides, FormSide } from "../Login/style";
+import {
+  DogSideSubscribe,
+  FormSubscribe,
+  FormSubscribeContainer,
+  SubscribeForm,
+  SubscribeTittle,
+  WhiteSide,
+} from "./style";
 
 export function Subscribe() {
   const [name, setName] = useState("");
@@ -32,19 +42,14 @@ export function Subscribe() {
   };
 
   return (
-    <div className="md:grid grid-cols-2">
-      <div className="hidden md:block visible bg-dogsubscriber bg-cover bg-no-repeat flex-col justify-center items-center" />
-      <div className="bg-white-100 bg-cover min-h-screen md:min-h-screen flex flex-col justify-center items-center">
-        <div className="bg-white-100 m-auto w-fit h-fit rounded-xl flex flex-col justify-center items-center">
-          <strong className="text-black text-3xl mb-4 block text-center">
-            Crie a sua conta
-          </strong>
-          <div className="m-auto p-5">
-            <form
-              className="flex flex-col gap-2 w-full h-full ml-1 "
-              onSubmit={subscription}
-            >
-              <strong className="text-black text-xl mb-1">Nome</strong>
+    <ContainerTwoSides>
+      <DogSideSubscribe />
+      <WhiteSide>
+        <SubscribeForm>
+          <SubscribeTittle>Crie a sua conta</SubscribeTittle>
+          <FormSubscribeContainer>
+            <FormSubscribe onSubmit={subscription}>
+              <EditFormTittle>Nome</EditFormTittle>
               <Input
                 styleType={{ theme: "light", size: "s" }}
                 type={"text"}
@@ -52,7 +57,7 @@ export function Subscribe() {
                 value={name}
                 setState={setName}
               />
-              <strong className="text-black text-xl mb-1">Idade</strong>
+              <EditFormTittle>Idade</EditFormTittle>
               <Input
                 styleType={{ theme: "light", size: "s" }}
                 type={"number"}
@@ -60,7 +65,7 @@ export function Subscribe() {
                 value={age}
                 setState={setAge}
               />
-              <strong className="text-black text-xl mb-1">Localização</strong>
+              <EditFormTittle>Localização</EditFormTittle>
               <Input
                 styleType={{ theme: "light", size: "s" }}
                 type={"text"}
@@ -68,7 +73,7 @@ export function Subscribe() {
                 value={locale}
                 setState={setLocale}
               />
-              <strong className="text-black text-xl mb-1">Email</strong>
+              <EditFormTittle>Email</EditFormTittle>
               <Input
                 styleType={{ theme: "light", size: "s" }}
                 type={"email"}
@@ -76,7 +81,7 @@ export function Subscribe() {
                 value={email}
                 setState={setEmail}
               />
-              <strong className="text-black text-xl mb-1">Senha</strong>
+              <EditFormTittle>Senha</EditFormTittle>
               <InputPassword
                 value={password}
                 setState={setPassword}
@@ -84,7 +89,7 @@ export function Subscribe() {
                 style={"light"}
                 eyeInput={"light"}
               />
-              <strong className="text-black text-xl mb-1">Telefone</strong>
+              <EditFormTittle>Telefone</EditFormTittle>
               <Input
                 styleType={{ theme: "light", size: "s" }}
                 placeholder="(xx) x xxxx-xxxx"
@@ -95,10 +100,10 @@ export function Subscribe() {
               <Button styleButton={{ color: "nude", size: "m" }}>
                 Cadastrar
               </Button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+            </FormSubscribe>
+          </FormSubscribeContainer>
+        </SubscribeForm>
+      </WhiteSide>
+    </ContainerTwoSides>
   );
 }

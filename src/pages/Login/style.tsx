@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import dogImage from '../../assets/background-sorriso-md-blend.jpg';
 import { point } from '../../components/Breakpoints';
 
-export const ContainerLogin = styled.div`
+export const ContainerTwoSides = styled.div`
   display: flex;
   @media ${point.tablet} {
     display: grid;
@@ -26,7 +26,7 @@ export const LoginForm = styled.form`
   width: 100%;
 `;
 
-export const DogSide = styled.div`
+export const DogSideLogin = styled.div`
   display: none;
   @media ${point.tablet} {
     visibility: visible;
