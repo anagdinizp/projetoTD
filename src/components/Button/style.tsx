@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css, ThemedCssFunction } from "styled-components";
+import { buttonProps, buttonType } from ".";
 
 export const ButtonContainer = styled.div`
   display: flex;
@@ -6,3 +7,25 @@ export const ButtonContainer = styled.div`
   text-align: center;
   align-items: center;
 `;
+
+export const StyledButton = styled.button`
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 1rem;
+  ${({ buttonStyle }: buttonProps) => getButtonType(buttonStyle)}
+`;
+
+const getButtonType = (buttonStyle: buttonType) => {
+  switch (buttonStyle) {
+    case "primary": {
+      return css`
+        background-color: #ac8975;
+        color: white;
+        width: 410px;
+        height: 60px;
+      `;
+    }
+  }
+};

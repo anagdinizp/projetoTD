@@ -97,9 +97,7 @@ export function Subscribe() {
                 setState={setTelephone}
                 type={"number"}
               />
-              <Button styleButton={{ color: "nude", size: "m" }}>
-                Cadastrar
-              </Button>
+              <Button buttonStyle={"primary"}>Cadastrar</Button>
             </FormSubscribe>
           </FormSubscribeContainer>
         </SubscribeForm>

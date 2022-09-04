@@ -126,7 +126,7 @@ export function DogProfile() {
               value={locale}
               setState={setLocale}
             />
-            <Button styleButton={{ color: "nude", size: "s" }}>Salvar</Button>
+            <Button buttonStyle={"primary"}>Salvar</Button>
           </EditProfileForm>
         </ContainerEditProfileForm>
         <DeleteContainer>

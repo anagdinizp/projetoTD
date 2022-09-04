@@ -53,9 +53,7 @@ export function EditProfile() {
       <EditProfileTittle>Editar informações do perfil</EditProfileTittle>
       <ContainerEditProfile>
         <ContainerImage>
-          <ProfileImage
-            src="https://pbs.twimg.com/profile_images/1562216319918931968/Unr7rsbO_400x400.jpg"
-          />
+          <ProfileImage src="https://pbs.twimg.com/profile_images/1562216319918931968/Unr7rsbO_400x400.jpg" />
           <ButtonEditImage>
             <ButtonEditImageIcon>{imagem}</ButtonEditImageIcon>
           </ButtonEditImage>
@@ -136,7 +134,7 @@ export function EditProfile() {
               style={"light"}
               eyeInput={"light"}
             />
-            <Button styleButton={{ color: "nude", size: "s" }}>Salvar</Button>
+            <Button buttonStyle={"primary"}>Salvar</Button>
           </EditProfileForm>
         </ContainerEditProfileForm>
         <DeleteContainer>
