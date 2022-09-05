@@ -3,7 +3,7 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useToast } from "../../components/Toast";
-import { Input, InputPassword } from "../../components/Input";
+import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import {
   ButtonEditImage,
@@ -60,79 +60,54 @@ export function EditProfile() {
         </ContainerImage>
         <ContainerEditProfileForm>
           <EditProfileForm onSubmit={saveChanges}>
-            <EditFormTittle>Nome</EditFormTittle>
             <Input
-              styleType={{
-                theme: "light",
-                size: "s",
-              }}
-              type={"text"}
+              title={"Nome"}
+              inputStyle="primary"
               placeholder={"Ana Gabriela"}
               value={name}
               setState={setName}
             />
-            <EditFormTittle>Idade</EditFormTittle>
             <Input
-              styleType={{
-                theme: "light",
-                size: "s",
-              }}
-              type={"number"}
+              title="Idade"
+              inputStyle="primary"
               placeholder={"23 anos"}
               value={age}
               setState={setAge}
             />
-            <EditFormTittle>Profissão</EditFormTittle>
             <Input
-              styleType={{
-                theme: "light",
-                size: "s",
-              }}
-              type={"text"}
+              title="Profissão"
+              inputStyle="primary"
               placeholder={"Estudante"}
               value={career}
               setState={setCareer}
             />
-            <EditFormTittle>Contato</EditFormTittle>
             <Input
-              styleType={{
-                theme: "light",
-                size: "s",
-              }}
-              type={"number"}
+              title="Contato"
+              inputStyle="primary"
               placeholder={"83 98735-0316"}
               value={telephone}
               setState={setTelephone}
             />
-            <EditFormTittle>Localização</EditFormTittle>
             <Input
-              styleType={{
-                theme: "light",
-                size: "s",
-              }}
-              type={"text"}
+              title="Localização"
+              inputStyle="primary"
               placeholder={"Campina Grande, PB"}
               value={locale}
               setState={setLocale}
             />
-            <EditFormTittle>Email</EditFormTittle>
             <Input
-              styleType={{
-                theme: "light",
-                size: "s",
-              }}
-              type={"text"}
+              title={"Email"}
+              inputStyle="primary"
               placeholder={"anagabriela0399@hotmail.com"}
               value={email}
               setState={setEmail}
             />
-            <EditFormTittle>Senha</EditFormTittle>
-            <InputPassword
+            <Input
+              title={"Senha"}
+              inputStyle="primary"
               setState={setPassword}
-              type={"password"}
               value={password}
-              style={"light"}
-              eyeInput={"light"}
+              password
             />
             <Button buttonStyle={"primary"}>Salvar</Button>
           </EditProfileForm>

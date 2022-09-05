@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button";
-import { Input, InputPassword } from "../../components/Input";
+import { Input } from "../../components/Input";
 import { useToast } from "../../components/Toast";
 import { EditFormTittle } from "../EditDogProfile/style";
 import { ContainerTwoSides, FormSide } from "../Login/style";
@@ -49,53 +49,49 @@ export function Subscribe() {
           <SubscribeTittle>Crie a sua conta</SubscribeTittle>
           <FormSubscribeContainer>
             <FormSubscribe onSubmit={subscription}>
-              <EditFormTittle>Nome</EditFormTittle>
               <Input
-                styleType={{ theme: "light", size: "s" }}
-                type={"text"}
+                title="Nome"
+                inputStyle="primary"
                 placeholder={"Digite seu nome completo"}
                 value={name}
                 setState={setName}
               />
-              <EditFormTittle>Idade</EditFormTittle>
               <Input
-                styleType={{ theme: "light", size: "s" }}
-                type={"number"}
+                title="Idade"
+                inputStyle="primary"
                 placeholder={"Digite sua data de nascimento"}
                 value={age}
                 setState={setAge}
               />
               <EditFormTittle>Localização</EditFormTittle>
               <Input
-                styleType={{ theme: "light", size: "s" }}
-                type={"text"}
+                title="Localização"
+                inputStyle="primary"
                 placeholder={"Digite sua cidade e Estado"}
                 value={locale}
                 setState={setLocale}
               />
               <EditFormTittle>Email</EditFormTittle>
               <Input
-                styleType={{ theme: "light", size: "s" }}
-                type={"email"}
+                title="Email"
+                inputStyle="primary"
                 placeholder={"Digite seu email"}
                 value={email}
                 setState={setEmail}
               />
-              <EditFormTittle>Senha</EditFormTittle>
-              <InputPassword
-                value={password}
-                setState={setPassword}
-                type={"password"}
-                style={"light"}
-                eyeInput={"light"}
-              />
-              <EditFormTittle>Telefone</EditFormTittle>
               <Input
-                styleType={{ theme: "light", size: "s" }}
+                title="Telefone"
+                inputStyle="primary"
                 placeholder="(xx) x xxxx-xxxx"
                 value={telephone}
                 setState={setTelephone}
-                type={"number"}
+              />
+              <Input
+                title="Senha"
+                inputStyle="primary"
+                value={password}
+                setState={setPassword}
+                password
               />
               <Button buttonStyle={"primary"}>Cadastrar</Button>
             </FormSubscribe>

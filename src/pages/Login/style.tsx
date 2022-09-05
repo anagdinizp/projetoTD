@@ -3,7 +3,7 @@ import dogImage from '../../assets/background-sorriso-md-blend.jpg';
 import { point } from '../../components/Breakpoints';
 
 export const ContainerTwoSides = styled.div`
-  display: flex;
+  display: block;
   @media ${point.tablet} {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -48,13 +48,10 @@ export const FormSide = styled.div`
   justify-content: center;
   align-self: center;
   align-items: center;
-  margin-left: 1.25rem;
   @media ${point.tablet} {
-    display: flex;
     justify-content: center;
     align-self: center;
     align-items: center;
-    margin-right: 4rem;
   }
 `;
 

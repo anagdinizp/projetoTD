@@ -2,7 +2,7 @@ import { FormEvent, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { authenticate } from "../../authorizations/Auth";
 import { Button } from "../../components/Button";
-import { Input, InputPassword } from "../../components/Input";
+import { Input } from "../../components/Input";
 import { Logo } from "../../components/Logo/Logo";
 import { useToast } from "../../components/Toast";
 import {
@@ -55,21 +55,19 @@ export function Login() {
         <ContainerLoginForm>
           <LoginTittle>Entre na sua conta</LoginTittle>
           <LoginForm onSubmit={enterAccount}>
-            <InputTittle>Email</InputTittle>
             <Input
-              styleType={{ theme: "light", size: "s" }}
+              title="Email"
+              inputStyle="primary"
               placeholder="Digite seu email"
               value={email}
               setState={setEmail}
-              type={"email"}
             />
-            <InputTittle>Senha</InputTittle>
-            <InputPassword
+            <Input
+              title="Senha"
+              inputStyle="primary"
               value={password}
               setState={setPassword}
-              type={"password"}
-              style={"light"}
-              eyeInput={"light"}
+              password
             />
             <Button buttonStyle="primary">Entrar</Button>
           </LoginForm>
