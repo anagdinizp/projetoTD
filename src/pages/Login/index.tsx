@@ -25,19 +25,16 @@ export function Login() {
   const navigate = useNavigate();
   const { showToast } = useToast();
 
-  const enterAccount = async (event: FormEvent) => {
+  const enterAccount = async (event: any) => {
     event.preventDefault();
-    if (!!email && !!password) {
+    if ((/\S+@\S+\.\S+/.test(email)) && !!password)   {
       UserApi.login({ email, password })
         .then((res: { data: { token: any } }) => {
           const { token } = res.data;
           authenticate(token);
+          showToast("Conta válida!", "green");
           navigate("/inicio");
-          console.log(token)
         })
-        .catch((error) => {
-          showToast("Houve um problema ao entrar na sua conta!", "red");
-        });
     } else showToast("Houve um problema ao entrar na sua conta!", "red");
   };
   return (

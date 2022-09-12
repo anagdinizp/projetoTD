@@ -18,6 +18,7 @@ export interface InputProps {
   password?: boolean;
   setState: (value: string) => void;
   inputStyle: InputType;
+  onChange?: (value:string) => void;
 }
 
 export function Input({

@@ -26,7 +26,7 @@ function Toast({ children }: { children: any }) {
     setTimeout(() => {
       setVisible(false);
       setMessage("");
-    }, 4000);
+    }, 3000);
   }
 
   function getColor(color: colorType) {
