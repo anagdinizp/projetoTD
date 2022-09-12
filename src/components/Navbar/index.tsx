@@ -5,6 +5,7 @@ import { faDog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UserAvatarAnchor } from "../Avatar";
 import { AnchorNav, IconNav, NavContainer, PagesNav, UlNav } from "./style";
+import { point } from "../Breakpoints";
 
 export function Navbar({ children }: any) {
   const [open, setOpen] = useState(false);
@@ -49,7 +50,7 @@ export function Navbar({ children }: any) {
               <PagesNav>Pretendentes</PagesNav>
             </AnchorNav>
         </li>
-        <li>
+        <li> 
           <UserAvatarAnchor
             image="https://pbs.twimg.com/profile_images/1562216319918931968/Unr7rsbO_400x400.jpg"
             width={"44rem"}

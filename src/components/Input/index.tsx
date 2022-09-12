@@ -7,7 +7,7 @@ import {
   PasswordEye,
   StyledInput,
 } from "./style";
-import { InputTittle } from "../../pages/Login/style";
+import { InputTitle } from "../../pages/Login/style";
 
 export type InputType = "primary" | "secondary";
 
@@ -34,7 +34,7 @@ export function Input({
   }
   return (
     <>
-      <InputTittle>{title}</InputTittle>
+      <InputTitle>{title}</InputTitle>
       {password ? (
         <InputPasswordContainer>
           <StyledInput

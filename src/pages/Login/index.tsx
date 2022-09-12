@@ -1,23 +1,22 @@
-import { FormEvent, useState, useContext } from "react";
+import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authenticate } from "../../authorizations/Auth";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
-import { Logo } from "../../components/Logo/Logo";
 import { useToast } from "../../components/Toast";
+import UserApi from "../../services/user";
 import {
   ContainerTwoSides,
   ContainerLoginForm,
   ContainerSlogan,
   DogSideLogin,
   FormSide,
-  InputTittle,
   LoginAnchor,
   LoginForm,
   LoginSpan,
-  LoginTittle,
-  SloganSubtittle,
-  SloganTittle,
+  LoginTitle,
+  SloganSubtitle,
+  SloganTitle,
 } from "./style";
 
 export function Login() {
@@ -26,34 +25,35 @@ export function Login() {
   const navigate = useNavigate();
   const { showToast } = useToast();
 
-  const enterAccount = async (event: FormEvent) => {};
-  //event.preventDefault();
-  //if (!!email && !!password) {
-  //UserApi.login({ email, password })
-  //.then((res: { data: { token: any } }) => {
-  //const { token } = res.data;
-  //authenticate(token);
-  //navigate("/inicio");
-  //})
-  //.catch((error) => {
-  //showToast("Houve um problema ao entrar na sua conta!", "red");
-  //});
-  //} else showToast("Houve um problema ao entrar na sua conta!", "red");
-  //}
+  const enterAccount = async (event: FormEvent) => {
+    event.preventDefault();
+    if (!!email && !!password) {
+      UserApi.login({ email, password })
+        .then((res: { data: { token: any } }) => {
+          const { token } = res.data;
+          authenticate(token);
+          navigate("/inicio");
+          console.log(token)
+        })
+        .catch((error) => {
+          showToast("Houve um problema ao entrar na sua conta!", "red");
+        });
+    } else showToast("Houve um problema ao entrar na sua conta!", "red");
+  };
   return (
     <ContainerTwoSides>
       <DogSideLogin>
         <ContainerSlogan>
-          <SloganTittle>Encontre o par perfeito para o seu pet</SloganTittle>
-          <SloganSubtittle>
+          <SloganTitle>Encontre o par perfeito para o seu pet</SloganTitle>
+          <SloganSubtitle>
             Com a nossa ajuda, você vai conseguir encontrar o par perfeito para
             o seu pet e os dois vão conseguir ter vários filhotes
-          </SloganSubtittle>
+          </SloganSubtitle>
         </ContainerSlogan>
       </DogSideLogin>
       <FormSide>
         <ContainerLoginForm>
-          <LoginTittle>Entre na sua conta</LoginTittle>
+          <LoginTitle>Entre na sua conta</LoginTitle>
           <LoginForm onSubmit={enterAccount}>
             <Input
               title="Email"

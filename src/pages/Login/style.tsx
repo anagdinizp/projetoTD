@@ -60,7 +60,7 @@ export const ContainerSlogan = styled.div`
   flex-direction: column;
 `;
 
-export const SloganTittle = styled.strong`
+export const SloganTitle = styled.strong`
   margin-bottom: 0.25rem;
   font-weight: 700;
   color: white;
@@ -70,7 +70,7 @@ export const SloganTittle = styled.strong`
   text-align: center;
 `;
 
-export const SloganSubtittle = styled.span`
+export const SloganSubtitle = styled.span`
   margin-left: 48px;
   margin-right: 48px;
   color: white;
@@ -79,14 +79,14 @@ export const SloganSubtittle = styled.span`
   text-align: justify;
 `;
 
-export const InputTittle = styled.strong`
+export const InputTitle = styled.strong`
   color: black;
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin-bottom: 0.25rem;
 `;
 
-export const LoginTittle = styled.strong`
+export const LoginTitle = styled.strong`
   color: black;
   font-size: 1.5rem;
   line-height: 2rem;
