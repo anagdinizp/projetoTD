@@ -27,11 +27,12 @@ export function Login() {
 
   const enterAccount = async (event: any) => {
     event.preventDefault();
-    if ((/\S+@\S+\.\S+/.test(email)) && !!password)   {
+    if ((/\S+@\S+\.\S+/.test(email)) && !!password) {
       UserApi.login({ email, password })
-        .then((res: { data: { token: any } }) => {
+        .then((res: { data: { token: any, id: string; name:string; } }) => {
           const { token } = res.data;
           authenticate(token);
+          console.log(token)
           showToast("Conta válida!", "green");
           navigate("/inicio");
         })
@@ -63,6 +64,7 @@ export function Login() {
               title="Senha"
               inputStyle="primary"
               value={password}
+              placeholder="Digite sua senha"
               setState={setPassword}
               password
             />
