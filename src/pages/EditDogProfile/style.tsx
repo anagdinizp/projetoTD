@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { point } from "../../components/Breakpoints";
 
 export const EditProfileTittle = styled.strong`
-  display: flex;
-  justify-content: center;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -20,8 +18,6 @@ export const ContainerEditProfile = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
-  width: 100%;
 `;
 
 export const ContainerImage = styled.div`
@@ -52,20 +48,14 @@ export const ButtonEditImageIcon = styled.span`
 
 export const ContainerEditProfileForm = styled.div`
   display: flex;
-  @media only screen and (${point.tablet}) { 
-    width: 100%;
-    //width: 600px; // NUNCA FAÇA ISSO DAQUI, VAI AO CONTRARIO DA RESPOSIVIDADE,
-    // SE A TELA TIVER MENOS DE 400px (caso mobile, ela estoura)
-    justify-self: center;
-  }
+  justify-content: center;
 `;
 
 export const EditProfileForm = styled.form`
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
-  width: 100%;
-  height: 100%;
 `;
 
 export const EditFormTittle = styled.strong`

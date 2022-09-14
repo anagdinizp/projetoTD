@@ -24,7 +24,7 @@ export function Router() {
         <Route path="/editar" element={<EditProfile />} />
         <Route path="/pet" element={<DogProfile />} />
       </Routes>
-      {["/", "/cadastro"].includes(pathname) ? null : <Footer />}
+      {["/", "/cadastro"].includes(pathname) ? null : null}
     </Toast>
   );
 }

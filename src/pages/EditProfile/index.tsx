@@ -58,60 +58,58 @@ export function EditProfile() {
             <ButtonEditImageIcon>{imagem}</ButtonEditImageIcon>
           </ButtonEditImage>
         </ContainerImage>
-        <ContainerEditProfileForm>
-          <EditProfileForm onSubmit={saveChanges}>
-            <Input
-              title={"Nome"}
-              inputStyle="primary"
-              placeholder={"Ana Gabriela"}
-              value={name}
-              setState={setName}
-            />
-            <Input
-              title="Idade"
-              inputStyle="primary"
-              placeholder={"23 anos"}
-              value={age}
-              setState={setAge}
-            />
-            <Input
-              title="Profissão"
-              inputStyle="primary"
-              placeholder={"Estudante"}
-              value={career}
-              setState={setCareer}
-            />
-            <Input
-              title="Contato"
-              inputStyle="primary"
-              placeholder={"83 98735-0316"}
-              value={telephone}
-              setState={setTelephone}
-            />
-            <Input
-              title="Localização"
-              inputStyle="primary"
-              placeholder={"Campina Grande, PB"}
-              value={locale}
-              setState={setLocale}
-            />
-            <Input
-              title={"Email"}
-              inputStyle="primary"
-              placeholder={"anagabriela0399@hotmail.com"}
-              value={email}
-              setState={setEmail}
-            />
-            <Input
-              title={"Senha"}
-              inputStyle="primary"
-              setState={setPassword}
-              value={password}
-              password
-            />
-            <Button buttonStyle={"primary"}>Salvar</Button>
-          </EditProfileForm>
-        </ContainerEditProfileForm>
+        <EditProfileForm onSubmit={saveChanges}>
+          <Input
+            title={"Nome"}
+            inputStyle="primary"
+            placeholder={"Ana Gabriela"}
+            value={name}
+            setState={setName}
+          />
+          <Input
+            title="Idade"
+            inputStyle="primary"
+            placeholder={"23 anos"}
+            value={age}
+            setState={setAge}
+          />
+          <Input
+            title="Profissão"
+            inputStyle="primary"
+            placeholder={"Estudante"}
+            value={career}
+            setState={setCareer}
+          />
+          <Input
+            title="Contato"
+            inputStyle="primary"
+            placeholder={"83 98735-0316"}
+            value={telephone}
+            setState={setTelephone}
+          />
+          <Input
+            title="Localização"
+            inputStyle="primary"
+            placeholder={"Campina Grande, PB"}
+            value={locale}
+            setState={setLocale}
+          />
+          <Input
+            title={"Email"}
+            inputStyle="primary"
+            placeholder={"anagabriela0399@hotmail.com"}
+            value={email}
+            setState={setEmail}
+          />
+          <Input
+            title={"Senha"}
+            inputStyle="primary"
+            setState={setPassword}
+            value={password}
+            password
+          />
+          <Button buttonStyle={"primary"}>Salvar</Button>
+        </EditProfileForm>
         <DeleteContainer>
           <DeleteText>Excluir conta</DeleteText>
           <DeleteIcon>{lixeira}</DeleteIcon>

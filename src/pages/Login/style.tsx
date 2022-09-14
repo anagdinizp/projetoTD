@@ -81,6 +81,7 @@ export const SloganSubtitle = styled.span`
 
 export const InputTitle = styled.strong`
   color: black;
+  width: max-content;
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin-bottom: 0.25rem;
