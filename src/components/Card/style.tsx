@@ -5,6 +5,7 @@ export const CardContainer = styled.div`
   background-color: #f0f0f0;
   border-radius: 0.5rem;
   width: 350px;
+  margin-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
   justify-content: center;
@@ -13,7 +14,6 @@ export const DogImageContainer = styled.div`
   display: flex;
   text-align: center;
   justify-content: center;
-
   img {
     border-radius: 0.5rem;
     margin-left: 0.5rem;

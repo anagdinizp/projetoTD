@@ -14,6 +14,7 @@ export const NavContainer = styled.div`
 export const UlNav = styled.ul`
   gap: 3.5rem;
   color: black;
+  display: contents;
   @media ${point.tablet} {
     gap: 5rem;
     display: flex;

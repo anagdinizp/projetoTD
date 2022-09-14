@@ -4,7 +4,7 @@ import { point } from '../../components/Breakpoints';
 
 export const ContainerTwoSides = styled.div`
   display: block;
-  @media ${point.tablet} {
+  @media only screen and (min-width: 768px) { 
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -28,7 +28,7 @@ export const LoginForm = styled.form`
 
 export const DogSideLogin = styled.div`
   display: none;
-  @media ${point.tablet} {
+  @media only screen and (min-width: 768px) { 
     visibility: visible;
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@ export const FormSide = styled.div`
   justify-content: center;
   align-self: center;
   align-items: center;
-  @media ${point.tablet} {
+  @media only screen and (min-width: 768px) { 
     justify-content: center;
     align-self: center;
     align-items: center;

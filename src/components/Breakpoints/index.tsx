@@ -6,7 +6,7 @@ const sizes = {
 };
 export const point = {
   mobile: `(min-width: ${sizes.mobile})`,
-  tablet: `(min-width: ${sizes.tablet})`,
+  tablet: `(min-width: ${sizes.tablet}) `,
   notebook: `(min-width: ${sizes.notebook})`,
   pc: `(min-width: ${sizes.pc})`,
 };
