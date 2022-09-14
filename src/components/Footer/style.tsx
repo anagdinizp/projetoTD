@@ -8,7 +8,7 @@ export const FooterContainer = styled.footer`
   width: 100%;
   justify-content: center;
   text-align: center;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     position: relative;
     bottom: 0;
     left: 0;

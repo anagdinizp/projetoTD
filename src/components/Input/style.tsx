@@ -12,7 +12,7 @@ export const StyledInput = styled.input`
   outline: none;
   font-size: 1rem;
   line-height: 1.5rem;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     font-size: 1.25rem;
     line-height: 1.75rem;
   }

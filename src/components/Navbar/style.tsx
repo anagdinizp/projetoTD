@@ -15,7 +15,7 @@ export const UlNav = styled.ul`
   gap: 3.5rem;
   color: black;
   display: contents;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     gap: 5rem;
     display: flex;
     justify-content: center;
@@ -38,7 +38,7 @@ export const IconNav = styled.span`
 
 export const PagesNav = styled.span`
   display: none;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     display: inline-block;
     text-align: center;
     padding: 0.5rem;

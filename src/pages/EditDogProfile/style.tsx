@@ -9,7 +9,7 @@ export const EditProfileTittle = styled.strong`
   line-height: 1.75rem;
   padding: 0.5rem;
   margin-top: 1.25rem;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     font-size: 1.5rem;
     line-height: 2rem;
   }
@@ -18,8 +18,7 @@ export const EditProfileTittle = styled.strong`
 export const ContainerEditProfile = styled.div`
   display: grid;
   gap: 0.5rem;
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
+  margin: 0.5rem;
   border-bottom-width: 1px;
 `;
 
@@ -51,7 +50,7 @@ export const ButtonEditImageIcon = styled.span`
 
 export const ContainerEditProfileForm = styled.div`
   display: flex;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     width: 600px;
     justify-self: center;
   }
@@ -70,7 +69,7 @@ export const EditFormTittle = styled.strong`
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 0.25rem;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     font-size: 1.5rem;
     line-height: 2rem;
   }
@@ -86,7 +85,7 @@ export const DeleteContainer = styled.div`
 export const DeleteText = styled.span`
   font-size: 1rem;
   line-height: 1.5rem;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
@@ -109,7 +108,7 @@ export const EditGalleryTittle = styled.strong`
   padding: 0.5rem;
   margin-bottom: 1.25rem;
   margin-top: 1.25rem;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     font-size: 1.5rem;
     line-height: 2rem;
   }

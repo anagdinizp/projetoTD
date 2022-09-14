@@ -6,13 +6,13 @@ export const OwnerContainer = styled.div`
   border-bottom-width: 1px;
   border-bottom-color: lightgray;
   display: block;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     display: flex;
   }
 `;
 
 export const OwnerAvatarContainer = styled.div`
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     margin-left: 2.5rem;
     padding: 2.5rem;
   }
@@ -25,7 +25,7 @@ export const OwnerAvatar = styled.img`
   margin: auto;
   margin-top: 1rem;
   overflow: hidden;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     width: 274px;
     height: 274px;
   }
@@ -37,7 +37,7 @@ export const InfoContainer = styled.div`
   font-weight: 200;
   padding: 2.5rem;
   margin-left: 0.25rem;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     padding: 5rem;
     margin-left: -4rem;
   }
@@ -56,7 +56,7 @@ export const OwnerName = styled.strong`
   line-height: 2rem;
   margin-right: 0.25rem;
   margin-bottom: 1rem;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     font-size: 2.25rem;
     line-height: 2.5rem;
     margin-right: 2rem;
@@ -81,7 +81,7 @@ export const InfoTittle = styled.strong`
   font-size: 1.125rem;
   line-height: 1.75rem;
   margin-top: 0.25rem;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     text-align: start;
   }
 `;
@@ -100,14 +100,14 @@ export const DogProfileContainer = styled.div`
   border-radius: 0.5rem;
   border-bottom-width: 1px;
   border-bottom-color: lightgray;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 `;
 
 export const DogImageContainer = styled.div`
-  @media ${point.tablet} {
+   @media only screen and (${point.tablet}) { 
     margin-left: 2.5rem;
     padding: 2.5rem;
   }
@@ -120,7 +120,7 @@ export const DogImage = styled.img`
   margin: auto;
   margin-top: 1rem;
   overflow: hidden;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     width: 274px;
     height: 274px;
   }
@@ -131,7 +131,7 @@ export const DogInfoContainer = styled.div`
   color: black;
   font-weight: 200;
   padding: 2.5rem;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     padding: 5rem;
     margin-left: -4rem;
   }
@@ -144,7 +144,7 @@ export const DogName = styled.strong`
   line-height: 2rem;
   text-align: start;
   margin-right: 0.25rem;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     font-size: 2.25rem;
     line-height: 2.5rem;
     margin-right: 2rem;

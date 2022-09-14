@@ -3,7 +3,7 @@ import { point } from "../../components/Breakpoints";
 
 export const DropdownContainer = styled.div`
   visibility: hidden;
-  @media ${point.tablet} {
+  @media only screen and (${point.tablet}) { 
     visibility: visible;
     position: absolute;
     margin-top: 0.5rem;
