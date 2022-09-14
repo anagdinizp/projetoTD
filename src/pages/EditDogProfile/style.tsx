@@ -16,10 +16,12 @@ export const EditProfileTittle = styled.strong`
 `;
 
 export const ContainerEditProfile = styled.div`
-  display: grid;
-  gap: 0.5rem;
-  margin: 0.5rem;
-  border-bottom-width: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  width: 100%;
 `;
 
 export const ContainerImage = styled.div`
@@ -51,7 +53,9 @@ export const ButtonEditImageIcon = styled.span`
 export const ContainerEditProfileForm = styled.div`
   display: flex;
   @media only screen and (${point.tablet}) { 
-    width: 600px;
+    width: 100%;
+    //width: 600px; // NUNCA FAÇA ISSO DAQUI, VAI AO CONTRARIO DA RESPOSIVIDADE,
+    // SE A TELA TIVER MENOS DE 400px (caso mobile, ela estoura)
     justify-self: center;
   }
 `;
