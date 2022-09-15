@@ -5,22 +5,40 @@ import { ButtonIcon, HomeButton, HomeContainer } from "./style";
 
 const cards = [
   {
-    name: "Simba",
+    name: "Caramelo",
     age: 4,
-    gender: "Macho",
-    breed: "Dachshund",
-    locale: "Campina Grande, PB",
+    gender: "Fêmea",
+    breed: "Labrador",
+    locale: "Curitiba, PR",
     dogAvatar:
-      "https://images.pexels.com/photos/1139794/pexels-photo-1139794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/102508/pexels-photo-102508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
-    name: "Bisteca",
+    name: "Thor",
     age: 2,
-    breed: "Dachshund",
+    breed: "Husky Siberiano",
     gender: "Macho",
-    locale: "Campina Grande, PB",
+    locale: "Florianópolis, SC",
     dogAvatar:
-      "https://images.pexels.com/photos/4148015/pexels-photo-4148015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/2853130/pexels-photo-2853130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    name: "Apolo",
+    age: 3,
+    breed: "Poodle",
+    gender: "Macho",
+    locale: "João Pessoa, PB",
+    dogAvatar:
+      "https://images.pexels.com/photos/8576306/pexels-photo-8576306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    name: "Lana",
+    age: 2,
+    breed: "Shi Tzu",
+    gender: "Fêmea",
+    locale: "Aracaju, SE",
+    dogAvatar:
+      "https://images.pexels.com/photos/936317/pexels-photo-936317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
 ];
 

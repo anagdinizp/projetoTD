@@ -71,57 +71,37 @@ export function DogProfile() {
         </ContainerImage>
         <ContainerEditProfileForm>
           <EditProfileForm onSubmit={saveChanges}>
-            <EditFormTittle>Nome</EditFormTittle>
             <Input
-              styleType={{
-                theme: "light",
-                size: "s",
-              }}
-              type={"text"}
+              title="Nome"
+              inputStyle="primary"
               placeholder={"Simba"}
               value={name}
               setState={setName}
             />
-            <EditFormTittle>Idade</EditFormTittle>
             <Input
-              styleType={{
-                theme: "light",
-                size: "s",
-              }}
-              type={"number"}
+              title="Idade"
+              inputStyle="primary"
               placeholder={"4 anos"}
               value={age}
               setState={setAge}
             />
-            <EditFormTittle>Raça</EditFormTittle>
             <Input
-              styleType={{
-                theme: "light",
-                size: "s",
-              }}
-              type={"text"}
+              title="Raça"
+              inputStyle="primary"
               placeholder={"Dachshund"}
               value={breed}
               setState={setBreed}
             />
-            <EditFormTittle>Sexo</EditFormTittle>
             <Input
-              styleType={{
-                theme: "light",
-                size: "s",
-              }}
-              type={"text"}
+              title="Sexo"
+              inputStyle="primary"
               placeholder={"Macho"}
               value={gender}
               setState={setGender}
             />
-            <EditFormTittle>Localização</EditFormTittle>
             <Input
-              styleType={{
-                theme: "light",
-                size: "s",
-              }}
-              type={"text"}
+              title="Localização"
+              inputStyle="primary"
               placeholder={"Campina Grande, PB"}
               value={locale}
               setState={setLocale}
@@ -129,11 +109,11 @@ export function DogProfile() {
             <Button buttonStyle={"primary"}>Salvar</Button>
           </EditProfileForm>
         </ContainerEditProfileForm>
-        <DeleteContainer>
+      </ContainerEditProfile>
+      <DeleteContainer>
           <DeleteText>Excluir pet</DeleteText>
           <DeleteIcon>{lixeira}</DeleteIcon>
-        </DeleteContainer>
-      </ContainerEditProfile>
+      </DeleteContainer>
       <>
         <EditGalleryTittle>Editar galeria</EditGalleryTittle>
         <GalleryContainer>

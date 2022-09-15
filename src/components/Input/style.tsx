@@ -42,6 +42,7 @@ export const ContainerEye = styled.div`
   padding-right: 1.25rem;
   height: 2, 5rem;
   outline: none;
+  width: 100%;
 `;
 
 export const PasswordEye = styled.i`

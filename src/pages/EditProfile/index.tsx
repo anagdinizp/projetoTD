@@ -103,6 +103,7 @@ export function EditProfile() {
           />
           <Input
             title={"Senha"}
+            placeholder="*******"
             inputStyle="primary"
             setState={setPassword}
             value={password}
@@ -110,11 +111,11 @@ export function EditProfile() {
           />
           <Button buttonStyle={"primary"}>Salvar</Button>
         </EditProfileForm>
-        <DeleteContainer>
+      </ContainerEditProfile>
+      <DeleteContainer>
           <DeleteText>Excluir conta</DeleteText>
           <DeleteIcon>{lixeira}</DeleteIcon>
-        </DeleteContainer>
-      </ContainerEditProfile>
+      </DeleteContainer>
     </>
   );
 }

@@ -2,11 +2,13 @@ import styled from "styled-components";
 import { point } from "../../components/Breakpoints";
 
 export const EditProfileTittle = styled.strong`
+  display: grid;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.75rem;
   padding: 0.5rem;
   margin-top: 1.25rem;
+  text-align: center;
   @media only screen and (${point.tablet}) { 
     font-size: 1.5rem;
     line-height: 2rem;
@@ -24,6 +26,7 @@ export const ContainerImage = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;
 
 export const ProfileImage = styled.img`
@@ -74,6 +77,7 @@ export const DeleteContainer = styled.div`
   justify-content: end;
   align-items: center;
   cursor: pointer;
+  padding: 0.5rem;
 `;
 
 export const DeleteText = styled.span`
