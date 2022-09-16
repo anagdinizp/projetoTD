@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleUser } from "@fortawesome/free-regular-svg-icons";
+import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import {
   DropdownContainer,
   LogoOutAnchor,
@@ -9,15 +12,19 @@ import {
 } from "./style";
 
 export function DropdownUser() {
+  const user = <FontAwesomeIcon icon={faCircleUser} />;
+  const sair = <FontAwesomeIcon icon={faArrowRightFromBracket} />;
+
   return (
     <DropdownContainer>
       <PerfilAnchorContainer>
         <PerfilAnchor href="/perfil">
-          <PerfilIcon src="https://img.icons8.com/external-anggara-detail-outline-anggara-putra/20/000000/external-user-contact-us-anggara-detail-outline-anggara-putra.png" />
+          <PerfilIcon>{user}</PerfilIcon>
           <PerfilDropdown>Perfil</PerfilDropdown>
         </PerfilAnchor>
       </PerfilAnchorContainer>
-      <LogoOutAnchor href="#">
+      <LogoOutAnchor href="/">
+        <PerfilIcon>{sair}</PerfilIcon>
         <LogoutDropdown>Sair</LogoutDropdown>
       </LogoOutAnchor>
     </DropdownContainer>

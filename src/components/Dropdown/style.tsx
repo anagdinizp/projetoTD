@@ -18,7 +18,7 @@ export const DropdownContainer = styled.div`
 
 export const PerfilAnchorContainer = styled.div`
   border-bottom-width: 1px;
-  border-bottom-color: lightgray;
+  border-bottom-color: #ece7e7;
 `;
 
 export const PerfilAnchor = styled.a`
@@ -29,18 +29,18 @@ export const PerfilAnchor = styled.a`
   display: flex;
   align-items: center;
   padding: 0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translateX(1px);
   :hover {
-    background-color: lightgray;
+    background-color: #f7f4f4;
   }
 `;
 
-export const PerfilIcon = styled.img`
+export const PerfilIcon = styled.div`
   margin: 0;
 `;
 
 export const PerfilDropdown = styled.span`
-  margin-left: 1.5rem;
+  margin-left: 2rem;
 `;
 
 export const LogoOutAnchor = styled.a`
@@ -50,14 +50,14 @@ export const LogoOutAnchor = styled.a`
   height: 3rem;
   display: flex;
   align-items: center;
-  pad: 0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  padding: 0.5rem;
+  transform: translateX(1px);
   border-radius: 0.25rem;
   :hover {
-    background-color: lightgray;
+    background-color: #f7f4f4;
   }
 `;
 
 export const LogoutDropdown = styled.span`
-  margin-left: 3rem;
+  margin-left: 2rem;
 `;
