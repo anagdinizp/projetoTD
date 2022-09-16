@@ -1,13 +1,12 @@
 import { faUserEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import {
   DogImage,
   DogImageContainer,
   DogInfoContainer,
   DogProfileContainer,
-  EditIcon,
-  EditIconAnchor,
+  IconInProfile,
   InfoContainer,
   InfoSubtittle,
   InfoTittle,
@@ -19,6 +18,7 @@ import {
   DogName,
   GalleryContainer,
   DogGallerySlider,
+  ProfileIcons,
 } from "./style";
 type genderType = "Macho" | "Fêmea";
 
@@ -82,6 +82,7 @@ const owner = {
 
 export function Profile() {
   const editar = <FontAwesomeIcon icon={faUserEdit} />;
+  const sair = <FontAwesomeIcon icon={faArrowRightFromBracket} />;
   return (
     <>
       <OwnerContainer>
@@ -91,9 +92,12 @@ export function Profile() {
         <InfoContainer>
           <NameIconContainer>
             <OwnerName>{owner.name}</OwnerName>
-            <EditIconAnchor href="/editar">
-              <EditIcon>{editar}</EditIcon>
-            </EditIconAnchor>
+            <ProfileIcons href="/editar">
+              <IconInProfile>{editar}</IconInProfile>
+            </ProfileIcons>
+            <ProfileIcons href="/">
+              <IconInProfile>{sair}</IconInProfile>
+            </ProfileIcons>
           </NameIconContainer>
           <InfoTittle>
             Idade:
@@ -121,9 +125,9 @@ export function Profile() {
           <DogInfoContainer>
             <NameIconContainer>
               <DogName>{dog.name}</DogName>
-              <EditIconAnchor href="/pet">
-                <EditIcon>{editar}</EditIcon>
-              </EditIconAnchor>
+              <ProfileIcons href="/pet">
+                <IconInProfile>{editar}</IconInProfile>
+              </ProfileIcons>
             </NameIconContainer>
             <InfoTittle>
               Idade:

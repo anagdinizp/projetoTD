@@ -8,6 +8,7 @@ export const OwnerContainer = styled.div`
   display: block;
   @media only screen and (${point.tablet}) { 
     display: flex;
+    justify-content: center;
   }
 `;
 
@@ -64,15 +65,16 @@ export const OwnerName = styled.strong`
   }
 `;
 
-export const EditIconAnchor = styled.a`
+export const ProfileIcons = styled.a`
   justify-items: center;
 `;
 
-export const EditIcon = styled.a`
+export const IconInProfile = styled.a`
   display: inline-block;
   vertical-align: middle;
   font-size: 1.5rem;
   line-height: 2rem;
+  margin: 0;
 `;
 
 export const InfoTittle = styled.strong`
