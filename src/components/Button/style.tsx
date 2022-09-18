@@ -23,7 +23,7 @@ const getButtonType = (buttonStyle: buttonType) => {
       return css`
         background-color: #ac8975;
         color: white;
-        width: 410px;
+        width: 100%;
         height: 60px;
       `;
     }

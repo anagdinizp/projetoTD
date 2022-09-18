@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 import { useToast } from "../../components/Toast";
-import { EditFormTittle } from "../EditDogProfile/style";
-import { ContainerTwoSides, FormSide } from "../Login/style";
+import { ContainerTwoSides} from "../Login/style";
 import {
   DogSideSubscribe,
   FormSubscribe,
@@ -63,7 +62,6 @@ export function Subscribe() {
                 value={age}
                 setState={setAge}
               />
-              <EditFormTittle>Localização</EditFormTittle>
               <Input
                 title="Localização"
                 inputStyle="primary"
@@ -71,7 +69,6 @@ export function Subscribe() {
                 value={locale}
                 setState={setLocale}
               />
-              <EditFormTittle>Email</EditFormTittle>
               <Input
                 title="Email"
                 inputStyle="primary"

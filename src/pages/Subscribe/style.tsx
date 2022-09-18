@@ -21,9 +21,10 @@ export const WhiteSide = styled.div`
   background-color: white;
   background-size: cover;
   min-height: 100vh;
+  margin-top: 5rem;
   @media ${point.tablet} {
     display: block;
-    margin-top: 10rem;
+    margin-top: 6rem;
 }
 `;
 
