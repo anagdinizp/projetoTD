@@ -21,11 +21,10 @@ export const WhiteSide = styled.div`
   background-color: white;
   background-size: cover;
   min-height: 100vh;
-  margin-top: 5rem;
-  @media ${point.tablet} {
-    display: block;
-    margin-top: 6rem;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const SubscribeForm = styled.div`
@@ -33,7 +32,6 @@ export const SubscribeForm = styled.div`
   margin: auto;
   width: fit-content;
   height: fit-content;
-  border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +39,6 @@ export const SubscribeForm = styled.div`
 `;
 
 export const SubscribeTittle = styled.strong`
-  margin-top: 5rem;
   color: black;
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -50,16 +47,8 @@ export const SubscribeTittle = styled.strong`
   text-align: center;
 `;
 
-export const FormSubscribeContainer = styled.div`
-  margin: auto;
-  padding: 1.25rem;
-`;
-
 export const FormSubscribe = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 100%;
-  height: 100%;
-  margin-left: 0.25rem;
 `;

@@ -4,14 +4,15 @@ import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 import { useToast } from "../../components/Toast";
 import { ContainerTwoSides} from "../Login/style";
+import UserApi from "../../services/user";
 import {
   DogSideSubscribe,
   FormSubscribe,
-  FormSubscribeContainer,
   SubscribeForm,
   SubscribeTittle,
   WhiteSide,
 } from "./style";
+import { authenticate } from "../../authorizations/Auth";
 
 export function Subscribe() {
   const [name, setName] = useState("");
@@ -34,19 +35,23 @@ export function Subscribe() {
 
   const subscription = async (event: FormEvent) => {
     event.preventDefault();
-
-    if (!!name && !!age && !!locale && !!email && !!password && !!telephone)
-      navigate("/inicio");
-    else showToast("Tem algo errado no seu cadastro!", "red");
+    if ((/\S+@\S+\.\S+/.test(email)) && !!password && !!age && !!locale && !!telephone) {
+      UserApi.login({ email, password })
+        .then((res: { data: { token: any, id: string; name:string; } }) => {
+          const { token } = res.data;
+          authenticate(token);
+          console.log(token)
+          showToast("Conta válida!", "green");
+          navigate("/inicio");
+        })
+    } else showToast("Houve um problema ao entrar na sua conta!", "red");
   };
 
   return (
     <ContainerTwoSides>
       <DogSideSubscribe />
       <WhiteSide>
-        <SubscribeForm>
           <SubscribeTittle>Crie a sua conta</SubscribeTittle>
-          <FormSubscribeContainer>
             <FormSubscribe onSubmit={subscription}>
               <Input
                 title="Nome"
@@ -86,14 +91,13 @@ export function Subscribe() {
               <Input
                 title="Senha"
                 inputStyle="primary"
+                placeholder="*******"
                 value={password}
                 setState={setPassword}
                 password
               />
               <Button buttonStyle={"primary"}>Cadastrar</Button>
             </FormSubscribe>
-          </FormSubscribeContainer>
-        </SubscribeForm>
       </WhiteSide>
     </ContainerTwoSides>
   );
