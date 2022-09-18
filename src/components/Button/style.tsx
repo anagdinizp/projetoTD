@@ -15,6 +15,9 @@ export const StyledButton = styled.button`
   line-height: 1.75rem;
   margin-top: 1rem;
   ${({ buttonStyle }: buttonProps) => getButtonType(buttonStyle)}
+  :hover {
+    background-color: #DDB096;
+  }
 `;
 
 const getButtonType = (buttonStyle: buttonType) => {

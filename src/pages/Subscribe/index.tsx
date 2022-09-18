@@ -8,7 +8,6 @@ import UserApi from "../../services/user";
 import {
   DogSideSubscribe,
   FormSubscribe,
-  SubscribeForm,
   SubscribeTittle,
   WhiteSide,
 } from "./style";
@@ -33,7 +32,7 @@ export function Subscribe() {
   };
   localStorage.setItem("user", JSON.stringify(user));
 
-  const subscription = async (event: FormEvent) => {
+  const subscription = async (event: any) => {
     event.preventDefault();
     if ((/\S+@\S+\.\S+/.test(email)) && !!password && !!age && !!locale && !!telephone) {
       UserApi.login({ email, password })

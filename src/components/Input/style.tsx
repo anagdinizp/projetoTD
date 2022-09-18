@@ -2,7 +2,12 @@ import styled, { css } from "styled-components";
 import { InputType, InputProps } from ".";
 import { point } from "../Breakpoints";
 
-export const StyledInput = styled.input`
+export interface StyledInputProps {
+  password?: boolean;
+  inputStyle: InputType;
+}
+
+export const StyledInput = styled.input<StyledInputProps>`
   display: flex;
   align-items: center;
   width: auto;
@@ -12,23 +17,22 @@ export const StyledInput = styled.input`
   outline: none;
   font-size: 1rem;
   line-height: 1.5rem;
-  @media only screen and (${point.tablet}) { 
+  @media only screen and (${point.tablet}) {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-  ${({ inputStyle }: InputProps) => getInputType(inputStyle)}
-  ${({ password }: InputProps) =>
+  ${({ inputStyle }: StyledInputProps) => getInputType(inputStyle)}
+  ${({ password }: StyledInputProps) =>
     password
-      ? `
-      border-bottom-right-radius: 0rem;
-      border-top-right-radius: 0rem;
-      border-top-left-radius: 0.5rem;
-      border-bottom-left-radius: 0.5rem;
-      `
-      : `
-      border-radius: 0.5rem;
-      ` 
-      }
+      ? css`
+          border-bottom-right-radius: 0rem;
+          border-top-right-radius: 0rem;
+          border-top-left-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+        `
+      : css`
+          border-radius: 0.5rem;
+        `}
 `;
 
 export const InputPasswordContainer = styled.div`
@@ -50,13 +54,13 @@ export const ContainerEye = styled.div`
 `;
 
 export const PasswordEye = styled.i`
-    display: contents;
-    width: 100%;
-    color: #ac8975;
-    cursor: pointer;
-    :hover {
-      color: black;
-    }
+  display: contents;
+  width: 100%;
+  color: #ac8975;
+  cursor: pointer;
+  :hover {
+    color: #ddb096;
+  }
 `;
 
 const getInputType = (inputStyle: InputType) => {

@@ -7,6 +7,10 @@ export default {
   login: async (payload: {
     email: string;
     password: string;
+    age?: number;
+    locale?: string;
+    telefone?: number;
+    name?: string;
   }): Promise<{data: {token:string; id: string; name:string;}}> => {
     localStorage.setItem("token", "tokenzao");
     return Promise.resolve({
