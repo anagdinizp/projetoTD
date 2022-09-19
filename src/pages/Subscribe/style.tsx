@@ -47,7 +47,7 @@ export const SubscribeTittle = styled.strong`
   text-align: center;
 `;
 
-export const FormSubscribe = styled.div`
+export const FormSubscribe = styled.form`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

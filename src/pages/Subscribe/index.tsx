@@ -1,17 +1,17 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { Input } from "../../components/Input";
 import { useToast } from "../../components/Toast";
 import { ContainerTwoSides} from "../Login/style";
 import UserApi from "../../services/user";
+import { authenticate } from "../../authorizations/Auth";
 import {
   DogSideSubscribe,
   FormSubscribe,
   SubscribeTittle,
   WhiteSide,
 } from "./style";
-import { authenticate } from "../../authorizations/Auth";
 
 export function Subscribe() {
   const [name, setName] = useState("");
@@ -40,10 +40,10 @@ export function Subscribe() {
           const { token } = res.data;
           authenticate(token);
           console.log(token)
-          showToast("Conta válida!", "green");
+          showToast("Conta criada!", "green");
           navigate("/inicio");
         })
-    } else showToast("Houve um problema ao entrar na sua conta!", "red");
+    } else showToast("Houve um problema ao criar sua conta!", "red");
   };
 
   return (
