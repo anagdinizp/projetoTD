@@ -1,5 +1,9 @@
-import styled, { css, ThemedCssFunction } from "styled-components";
-import { buttonProps, buttonType } from ".";
+import styled, { css } from "styled-components";
+import { buttonType } from ".";
+
+export interface StyledButtonProps {
+  buttonStyle: buttonType;
+}
 
 export const ButtonContainer = styled.div`
   display: flex;
@@ -8,13 +12,13 @@ export const ButtonContainer = styled.div`
   align-items: center;
 `;
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<StyledButtonProps>`
   border-radius: 0.5rem;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin-top: 1rem;
-  ${({ buttonStyle }: buttonProps) => getButtonType(buttonStyle)}
+  ${({ buttonStyle }: StyledButtonProps) => getButtonType(buttonStyle)}
   :hover {
     background-color: #DDB096;
   }
