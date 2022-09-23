@@ -1,4 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { colorType } from ".";
+
+export interface StyledCardProps {
+  color: colorType;
+}
 
 export const CardContainer = styled.div`
   display: block;
@@ -67,14 +72,24 @@ export const CardButton = styled.button`
   border-bottom-right-radius: 0.5rem;
   width: 100%;
   height: 3rem;
-  :hover {
-    text-decoration-color: #f44336;
-  }
 `;
-
-export const ButtonIcon = styled.span`
+export const ButtonIcon = styled.span<StyledCardProps>`
   display: inline-block;
   vertical-align: middle;
   font-size: 1.125rem;
   line-height: 1.75rem;
+  ${({ color }: StyledCardProps) =>
+    color === "black"
+      ? css`
+          color: black;
+          :hover {
+            color: #f44336;
+          }
+        `
+      : css`
+          color: #f44336;
+          :hover {
+            color: black;
+          }
+        `}
 `;

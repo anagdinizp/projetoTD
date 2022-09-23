@@ -5,22 +5,40 @@ import { ButtonIcon, HomeButton, HomeContainer } from "./style";
 
 const cards = [
   {
-    name: "Simba",
+    name: "Elton",
     age: 4,
     gender: "Macho",
-    breed: "Dachshund",
-    locale: "Campina Grande, PB",
+    breed: "Pitbull",
+    locale: "Salvador, BA",
     dogAvatar:
-      "https://images.pexels.com/photos/1139794/pexels-photo-1139794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/5860550/pexels-photo-5860550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
-    name: "Bisteca",
+    name: "Lisa",
     age: 2,
-    breed: "Dachshund",
-    gender: "Macho",
-    locale: "Campina Grande, PB",
+    breed: "Pug",
+    gender: "Fêmea",
+    locale: "Curitiba, PR",
     dogAvatar:
-      "https://images.pexels.com/photos/4148015/pexels-photo-4148015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/1289557/pexels-photo-1289557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    name: "Lolla",
+    age: 2,
+    breed: "Shih tzu",
+    gender: "Fêmea",
+    locale: "Curitiba, PR",
+    dogAvatar:
+      "https://images.pexels.com/photos/3361739/pexels-photo-3361739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    name: "Stark",
+    age: 3,
+    breed: "Husky Siberiano",
+    gender: "Macho",
+    locale: "Florianópolis, SC",
+    dogAvatar:
+      "https://images.pexels.com/photos/803766/pexels-photo-803766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
 ];
 
@@ -38,6 +56,7 @@ export function Home() {
             breed={card.breed}
             locale={card.locale}
             dogImage={card.dogAvatar}
+            color="black"
           />
         ))}
       </HomeContainer>

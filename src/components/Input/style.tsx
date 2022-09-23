@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { InputType, InputProps } from ".";
+import { InputType } from ".";
 import { point } from "../Breakpoints";
 
 export interface StyledInputProps {

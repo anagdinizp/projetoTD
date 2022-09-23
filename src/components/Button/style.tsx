@@ -1,4 +1,4 @@
-import styled, { css, ThemedCssFunction } from "styled-components";
+import styled, { css } from "styled-components";
 import { buttonProps, buttonType } from ".";
 
 export const ButtonContainer = styled.div`

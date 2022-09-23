@@ -2,6 +2,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { Toast } from "./components/Toast";
+import { Crushs } from "./pages/Crushs";
 import { DogProfile } from "./pages/EditDogProfile";
 import { EditProfile } from "./pages/EditProfile";
 import { Home } from "./pages/Home";
@@ -23,6 +24,7 @@ export function Router() {
         <Route path="/pretendentes" element={<Suitors />} />
         <Route path="/editar" element={<EditProfile />} />
         <Route path="/pet" element={<DogProfile />} />
+        <Route path="/crushs" element={<Crushs />} />
       </Routes>
       {["/", "/cadastro"].includes(pathname) ? null : null}
     </Toast>
