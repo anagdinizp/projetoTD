@@ -60,9 +60,6 @@ export function Crushs() {
           />
         ))}
       </HomeContainer>
-      <HomeButton>
-        <ButtonIcon>{descer}</ButtonIcon>
-      </HomeButton>
     </>
   );
 }
