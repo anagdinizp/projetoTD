@@ -39,7 +39,7 @@ export function Navbar({ children }: any) {
             </AnchorNav>
         </li>
         <li>
-            <AnchorNav href={"#"}>
+            <AnchorNav href={"/crushs"}>
               <IconNav>{pata}</IconNav>
               <PagesNav>Meus crushs</PagesNav>
             </AnchorNav>

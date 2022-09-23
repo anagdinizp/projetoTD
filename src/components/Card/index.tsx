@@ -10,18 +10,20 @@ import {
   InfoSubtittle,
   InfoTittle,
 } from "./style";
-type genderType = "Macho" | "Fêmea";
+export type genderType = "Macho" | "Fêmea";
+export type colorType = "black" | "red";
 
-interface dataCard {
+export interface dataCard {
   name: string;
   age: number;
   gender: string;
   breed: string;
   locale: string;
   dogImage: string;
+  color: colorType;
 }
 
-export function Card({ name, age, gender, breed, locale, dogImage }: dataCard) {
+export function Card({ name, age, gender, breed, locale, dogImage, color }: dataCard) {
   const coração = <FontAwesomeIcon icon={faHeart} />;
   return (
     <CardContainer>
@@ -48,7 +50,7 @@ export function Card({ name, age, gender, breed, locale, dogImage }: dataCard) {
         </InfoTittle>
       </InfoContainer>
       <CardButton>
-        <ButtonIcon> {coração}</ButtonIcon>
+        <ButtonIcon color={color}> {coração}</ButtonIcon>
       </CardButton>
     </CardContainer>
   );

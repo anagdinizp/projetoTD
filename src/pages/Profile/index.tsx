@@ -20,6 +20,7 @@ import {
   DogGallerySlider,
   ProfileIcons,
 } from "./style";
+
 type genderType = "Macho" | "Fêmea";
 
 interface profileData {
