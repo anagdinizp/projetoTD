@@ -29,7 +29,7 @@ export function Navbar({ children }: any) {
       }
     }
   });
-
+ 
   return (
     <NavContainer>
       <UlNav>
