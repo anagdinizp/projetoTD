@@ -4,7 +4,7 @@ import { faBone } from "@fortawesome/free-solid-svg-icons";
 import { faDog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UserAvatar, UserAvatarAnchor } from "../Avatar";
-import { AnchorNav, IconNav, NavContainer, PagesNav, UlNav } from "./style";
+import { AnchorNav, IconNav, Item, NavContainer, PagesNav, UlNav } from "./style";
 import { DropdownUser } from "../Dropdown";
 
 export function Navbar({ children }: any) {
@@ -32,25 +32,31 @@ export function Navbar({ children }: any) {
   return (
     <NavContainer>
       <UlNav>
-        <li>
+        <Item>
             <AnchorNav href={"/inicio"}>
               <IconNav>{cachorro}</IconNav>
               <PagesNav>Início</PagesNav>
             </AnchorNav>
+<<<<<<< Updated upstream
         </li>
         <li>
-            <AnchorNav href={"/crushs"}>
+<AnchorNav href={"/crushs"}>
+=======
+        </Item>
+        <Item>
+            <AnchorNav href={"#"}>
+>>>>>>> Stashed changes
               <IconNav>{pata}</IconNav>
               <PagesNav>Meus crushs</PagesNav>
             </AnchorNav>
-        </li>
-        <li>
+        </Item>
+        <Item>
             <AnchorNav href={"#"}>
               <IconNav>{osso}</IconNav>
               <PagesNav>Pretendentes</PagesNav>
             </AnchorNav>
-        </li>
-        <li> 
+        </Item>
+        <Item> 
         {(window.matchMedia("(min-width:768px)").matches) 
         ? <div ref={ref as any} onClick={() => setOpen(!open)}>
         <UserAvatar width={"44rem"} height={"14rem"} image={"https://pbs.twimg.com/profile_images/1562216319918931968/Unr7rsbO_400x400.jpg"}/>
@@ -62,7 +68,7 @@ export function Navbar({ children }: any) {
             height={"14rem"}
           />
         }
-        </li>
+        </Item>
       </UlNav>
     </NavContainer>
   );

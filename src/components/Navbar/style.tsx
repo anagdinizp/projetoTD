@@ -47,3 +47,10 @@ export const PagesNav = styled.span`
     font-weight: 200;
   }
 `;
+
+export const Item = styled.li`
+:hover{
+  border-bottom-color: #ac8975;
+  border-bottom-width: 0.3rem;
+}
+`;
