@@ -14,7 +14,6 @@ import {
   DeleteContainer,
   DeleteIcon,
   DeleteText,
-  EditFormTittle,
   EditProfileForm,
   EditProfileTittle,
   ProfileImage,

@@ -6,7 +6,6 @@ import {
   LogoOutAnchor,
   LogoutDropdown,
   PerfilAnchor,
-  PerfilAnchorContainer,
   PerfilDropdown,
   PerfilIcon,
 } from "./style";
@@ -17,12 +16,10 @@ export function DropdownUser() {
 
   return (
     <DropdownContainer>
-      <PerfilAnchorContainer>
         <PerfilAnchor href="/perfil">
           <PerfilIcon>{user}</PerfilIcon>
           <PerfilDropdown>Perfil</PerfilDropdown>
         </PerfilAnchor>
-      </PerfilAnchorContainer>
       <LogoOutAnchor href="/">
         <PerfilIcon>{sair}</PerfilIcon>
         <LogoutDropdown>Sair</LogoutDropdown>
