@@ -33,7 +33,6 @@ export const DogInfoContainer = styled.div`
   height: 3rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
   padding: 0.5rem;
   border-bottom-width: 1px;
   border-bottom-color: #ece7e7;
@@ -44,12 +43,13 @@ export const DogInfoContainer = styled.div`
 `;
 
 export const DogMiniIcon = styled.img`
-  width: 13rem;
-  height: 3rem;
+  width: 4rem;
+  height: 3.8rem;
   border-radius: 100%;
-  padding: 0.50rem;
+  padding: 1rem;
+  margin: 0;
 `;
 
 export const DogName = styled.span`
-  margin-right: 1.50rem;
+  margin-right: 1rem;
 `;

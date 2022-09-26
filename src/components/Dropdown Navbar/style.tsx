@@ -9,7 +9,6 @@ export const DropdownContainer = styled.div`
     margin-top: 0.5rem;
     top: 3.5rem;
     width: 9rem;
-    pad: 0.25rem;
     overflow: hidden;
     background-color: white;
     border-top-right-radius: 0;
