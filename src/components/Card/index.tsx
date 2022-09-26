@@ -1,5 +1,7 @@
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useRef, useState } from "react";
+import { DropdownCard } from "../Dropdown Card";
 import {
   ButtonIcon,
   CardButton,
@@ -23,8 +25,32 @@ export interface dataCard {
   color: colorType;
 }
 
-export function Card({ name, age, gender, breed, locale, dogImage, color }: dataCard) {
+export function Card({
+  name,
+  age,
+  gender,
+  breed,
+  locale,
+  dogImage,
+  color,
+}: dataCard) {
   const coração = <FontAwesomeIcon icon={faHeart} />;
+  const [open, setOpen] = useState(false);
+  const ref = useRef();
+  useEffect(() => {
+    document.addEventListener("click", handleClick);
+
+    return () => document.removeEventListener("click", handleClick);
+
+    function handleClick(event: any) {
+      if (ref && ref.current) {
+        const myRef: any = ref.current;
+        if (!myRef.contains(event.target)) {
+          setOpen(false);
+        }
+      }
+    }
+  });
   return (
     <CardContainer>
       <DogImageContainer>
@@ -50,7 +76,14 @@ export function Card({ name, age, gender, breed, locale, dogImage, color }: data
         </InfoTittle>
       </InfoContainer>
       <CardButton>
-        <ButtonIcon color={color}> {coração}</ButtonIcon>
+        <ButtonIcon
+          ref={ref as any}
+          onClick={() => setOpen(!open)}
+          color={color}
+        >
+          {coração}
+          {open && <DropdownCard />}
+        </ButtonIcon>
       </CardButton>
     </CardContainer>
   );

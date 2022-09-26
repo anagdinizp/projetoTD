@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { faPaw } from "@fortawesome/free-solid-svg-icons";
 import { faBone } from "@fortawesome/free-solid-svg-icons";
@@ -6,7 +5,7 @@ import { faDog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UserAvatar, UserAvatarAnchor } from "../Avatar";
 import { AnchorNav, IconNav, Item, NavContainer, PagesNav, UlNav } from "./style";
-import { DropdownUser } from "../Dropdown";
+import { DropdownUser } from "../Dropdown Navbar";
 
 export function Navbar({ children }: any) {
   const [open, setOpen] = useState(false);
