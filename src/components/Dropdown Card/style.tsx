@@ -2,9 +2,7 @@ import styled from "styled-components";
 import { point } from "../Breakpoints";
 
 export const DropdownCardContainer = styled.div`
-  visibility: hidden;
-  @media only screen and (${point.tablet}) { 
-    visibility: visible;
+  @media only screen and (${point.mobile}) { 
     position: absolute;
     margin-top: 0.6rem;
     margin-left: -4rem;
@@ -27,6 +25,7 @@ export const ContainerButtonDog = styled.button`
 `;
 
 export const DogInfoContainer = styled.div`
+  background-color: white;
   color: gray;
   font-size: 0.875rem;
   line-height: 1.25rem;

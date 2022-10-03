@@ -11,8 +11,8 @@ import {
 } from "./style";
 
 export function DropdownUser() {
-  const user = <FontAwesomeIcon icon={faCircleUser} />;
   const sair = <FontAwesomeIcon icon={faArrowRightFromBracket} />;
+  const user = <FontAwesomeIcon icon={faCircleUser} />;
 
   return (
     <DropdownContainer>
