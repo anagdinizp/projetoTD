@@ -53,11 +53,11 @@ export function Navbar({ children }: any) {
         <li> 
         {(window.matchMedia("(min-width:768px)").matches) 
         ? <div ref={ref as any} onClick={() => setOpen(!open)}>
-        <UserAvatar width={"44rem"} height={"14rem"} image={"https://pbs.twimg.com/profile_images/1562216319918931968/Unr7rsbO_400x400.jpg"}/>
+        <UserAvatar width={"44rem"} height={"14rem"} image={"https://avatars.githubusercontent.com/u/79330582?v=4"}/>
         {open && <DropdownUser />}
         </div>
         : <UserAvatarAnchor
-            image="https://pbs.twimg.com/profile_images/1562216319918931968/Unr7rsbO_400x400.jpg"
+            image="https://avatars.githubusercontent.com/u/79330582?v=4"
             width={"44rem"}
             height={"14rem"}
           />
