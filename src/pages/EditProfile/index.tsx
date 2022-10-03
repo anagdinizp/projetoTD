@@ -52,7 +52,7 @@ export function EditProfile() {
       <EditProfileTittle>Editar informações do perfil</EditProfileTittle>
       <ContainerEditProfile>
         <ContainerImage>
-          <ProfileImage src="https://pbs.twimg.com/profile_images/1562216319918931968/Unr7rsbO_400x400.jpg" />
+          <ProfileImage src="https://avatars.githubusercontent.com/u/79330582?v=4" />
           <ButtonEditImage>
             <ButtonEditImageIcon>{imagem}</ButtonEditImageIcon>
           </ButtonEditImage>

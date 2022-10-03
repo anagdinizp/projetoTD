@@ -73,7 +73,7 @@ const dogs = [
 const owner = {
   id: 3,
   avatar:
-    "https://pbs.twimg.com/profile_images/1562216319918931968/Unr7rsbO_400x400.jpg",
+    "https://avatars.githubusercontent.com/u/79330582?v=4",
   name: "Ana",
   age: 23,
   career: "Estudante",
